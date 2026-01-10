@@ -66,12 +66,6 @@ const experience = [
 
 const education = [
     {
-        degree: "Master of Business Administration (MBA)",
-        school: "Queen's University Belfast",
-        year: "Starting Aug 2025",
-        status: "Upcoming"
-    },
-    {
         degree: "Product Management Cohort",
         school: "Insurjo - The Product Folks",
         year: "Aug 2022 - Apr 2023",
