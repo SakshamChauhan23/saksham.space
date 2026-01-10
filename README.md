@@ -1,36 +1,173 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# saksham.space - Personal Portfolio
 
-## Getting Started
+A modern, minimal portfolio website showcasing product building expertise and case studies, built with Next.js 16 and featuring smooth animations and a clean design aesthetic.
 
-First, run the development server:
+## 🌐 Live Site
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**[saksham.space](https://saksham.space)**
+
+## 🚀 About
+
+This portfolio demonstrates a product builder's approach to web development—clean, functional, and focused on content over decoration. Built to showcase real products, real impact, and the ability to ship fast.
+
+**Key Highlights:**
+- 0 to 1 Product Build service offering
+- Detailed case studies from real projects
+- Minimal, typography-focused design
+- Fast, responsive, and accessible
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **React**: v19.2.3
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── app/                    # Next.js App Router pages
+│   ├── about/             # About page with timeline
+│   ├── background/        # Background/experience
+│   ├── blog/              # Blog section
+│   ├── services/          # Build Products page
+│   └── page.tsx           # Homepage
+├── components/            # Reusable React components
+│   ├── sections/          # Page sections (Hero, Projects, etc.)
+│   ├── Header.tsx         # Navigation
+│   ├── Footer.tsx         # Footer with contact
+│   ├── AnimatedText.tsx   # Text animations
+│   └── ...more
+├── data/                  # Shared data (projects, etc.)
+└── public/                # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Pages
+- **Home**: Hero, product journey, selected work, collaboration options
+- **About**: Professional timeline and journey
+- **Background**: Detailed experience and background
+- **Services (Build Products)**: Service offering with case studies and FAQ
+- **Blog**: Articles and writing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Design Philosophy
+- **Minimal**: No card-heavy designs, focus on typography and whitespace
+- **Clean**: Simple borders, arrows, and visual hierarchy
+- **Fast**: Optimized performance and smooth animations
+- **Accessible**: Semantic HTML and proper contrast
 
-## Learn More
+### Components
+- Animated text effects with Framer Motion
+- Smooth page transitions
+- Theme toggle (dark/light mode)
+- Scroll progress indicator
+- Responsive navigation
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Services Page Highlights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The `/services` (Build Products) page features:
+- **Creative numbered layout** for "Who This Works For" section
+- **Expandable case studies** with detailed problem/solution/impact breakdowns
+- **FAQ accordion** with smooth animations
+- **Minimal design** with strategic use of whitespace
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📧 Contact Information
 
-## Deploy on Vercel
+- **Email**: sakshamchauhan23@gmail.com
+- **Calendar**: [Book a Discovery Call](https://calendar.app.google/66rqVeepUyMsziNfA)
+- **LinkedIn**: [linkedin.com/in/sakshamchauhan](https://linkedin.com/in/sakshamchauhan)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Prerequisites
+- Node.js 20+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/SakshamChauhan23/growth-sprint-studio.git
+
+# Navigate to project directory
+cd growth-sprint-studio
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🎨 Design Decisions
+
+### Typography Over Cards
+Moved away from card-heavy designs to focus on:
+- Clean typography hierarchy
+- Strategic use of borders and dividers
+- Arrow indicators (→) for lists
+- Generous whitespace
+
+### Animation Strategy
+- Subtle fade-in effects on scroll
+- Smooth height transitions for accordions
+- Hover micro-interactions
+- No heavy or distracting animations
+
+### Color Usage
+- Minimal use of accent colors
+- High contrast for readability
+- Consistent muted text tones
+- Strategic pops of color for CTAs
+
+## 📱 Responsive Design
+
+Fully responsive across all devices:
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- Touch-friendly interactive elements
+- Optimized for both desktop and mobile experiences
+
+## 🔄 Recent Updates
+
+- ✅ Redesigned services page with "Build Products" branding
+- ✅ Added detailed case studies with expandable sections
+- ✅ Implemented FAQ accordion with smooth animations
+- ✅ Created creative numbered layout for target audience section
+- ✅ Updated About page to reflect current role and AI learning focus
+- ✅ Removed emoji clutter for cleaner aesthetic
+- ✅ Shared project data structure to avoid duplication
+
+## 📄 License
+
+This is a personal portfolio project. All rights reserved.
+
+## 🤝 Contributing
+
+This is a personal portfolio. Not open for contributions.
+
+## 👤 Author
+
+**Saksham Chauhan**  
+Product Builder | 0 to 1 Specialist
+
+Building products that ship in weeks, not months.
