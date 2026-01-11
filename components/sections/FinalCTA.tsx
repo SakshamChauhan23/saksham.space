@@ -8,7 +8,7 @@ export default function FinalCTA() {
     return (
         <Section className="bg-card border-t border-border">
             <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="font-bold mb-6" style={{ fontSize: "var(--fluid-h2)" }}>
                     Let&apos;s Build Something Meaningful
                 </h2>
 

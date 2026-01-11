@@ -82,10 +82,10 @@ export default function ServicesContent() {
                         <span className="text-sm text-muted uppercase tracking-widest mb-6 block">
                             Build Products
                         </span>
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
+                        <h1 className="font-bold text-foreground mb-8 leading-tight" style={{ fontSize: "var(--fluid-h1)" }}>
                             0 to 1 Product Build
                         </h1>
-                        <p className="text-xl md:text-2xl text-muted max-w-3xl mb-12 leading-relaxed">
+                        <p className="text-muted max-w-3xl mb-12 leading-relaxed" style={{ fontSize: "var(--fluid-p)" }}>
                             Your idea, shipped in <span className="text-foreground font-semibold">30–45 days</span>.
                             Not 6 months. Not "it depends."
                         </p>
@@ -97,7 +97,7 @@ export default function ServicesContent() {
             </Section>
 
             {/* Value Props - Minimal */}
-            <Section className="py-16 border-t border-border">
+            <Section className="border-t border-border">
                 <div className="max-w-4xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {[
@@ -113,7 +113,7 @@ export default function ServicesContent() {
                                 transition={{ delay: index * 0.1 }}
                                 className="text-left"
                             >
-                                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">{stat.value}</div>
+                                <div className="font-bold text-foreground mb-2" style={{ fontSize: "var(--fluid-h2)" }}>{stat.value}</div>
                                 <div className="text-muted">{stat.label}</div>
                             </motion.div>
                         ))}
@@ -122,7 +122,7 @@ export default function ServicesContent() {
             </Section>
 
             {/* What's Included - List Style */}
-            <Section className="py-16 border-t border-border">
+            <Section className="border-t border-border">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -130,7 +130,7 @@ export default function ServicesContent() {
                         viewport={{ once: true }}
                     >
                         <span className="text-sm text-muted uppercase tracking-widest mb-4 block">The Sprint</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">What's Included</h2>
+                        <h2 className="font-bold text-foreground mb-12" style={{ fontSize: "var(--fluid-h2)" }}>What's Included</h2>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
@@ -185,7 +185,7 @@ export default function ServicesContent() {
                                             </span>
                                             <span className="text-xs font-medium text-muted">{project.hook}</span>
                                         </div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                                        <h3 className="font-bold text-foreground mb-2 group-hover:text-accent transition-colors" style={{ fontSize: "var(--fluid-h3)" }}>
                                             {project.title}
                                         </h3>
                                         <p className="text-lg text-muted font-medium">{project.subtitle}</p>
@@ -336,7 +336,7 @@ export default function ServicesContent() {
             </Section>
 
             {/* Who This Works For - Creative Design */}
-            <Section className="py-16 border-t border-border">
+            <Section className="border-t border-border">
                 <div className="max-w-5xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -345,7 +345,7 @@ export default function ServicesContent() {
                         className="mb-20"
                     >
                         <span className="text-sm text-muted uppercase tracking-widest mb-4 block">Ideal For</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Who This Works For</h2>
+                        <h2 className="font-bold text-foreground" style={{ fontSize: "var(--fluid-h2)" }}>Who This Works For</h2>
                     </motion.div>
 
                     <div className="space-y-20">
@@ -368,7 +368,7 @@ export default function ServicesContent() {
                                 {/* Content */}
                                 <div className="md:col-span-10 space-y-6">
                                     <div>
-                                        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                                        <h3 className="font-bold text-foreground mb-3" style={{ fontSize: "var(--fluid-h3)" }}>
                                             {item.title}
                                         </h3>
                                         <p className="text-lg text-muted/90 max-w-2xl">
@@ -400,7 +400,7 @@ export default function ServicesContent() {
             </Section>
 
             {/* FAQ - Minimal */}
-            <Section className="py-16 border-t border-border">
+            <Section className="border-t border-border">
                 <div className="max-w-3xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -408,7 +408,7 @@ export default function ServicesContent() {
                         viewport={{ once: true }}
                     >
                         <span className="text-sm text-muted uppercase tracking-widest mb-4 block">FAQ</span>
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">Common Questions</h2>
+                        <h2 className="font-bold text-foreground mb-12" style={{ fontSize: "var(--fluid-h2)" }}>Common Questions</h2>
                     </motion.div>
 
                     <div className="space-y-8">
@@ -457,17 +457,17 @@ export default function ServicesContent() {
             </Section>
 
             {/* CTA - Clean */}
-            <Section className="py-24 border-t border-border">
+            <Section className="border-t border-border">
                 <div className="max-w-3xl mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                        <h2 className="font-bold text-foreground mb-6" style={{ fontSize: "var(--fluid-h1)" }}>
                             Ready to Build?
                         </h2>
-                        <p className="text-lg md:text-xl text-muted mb-12 leading-relaxed">
+                        <p className="text-muted mb-12 leading-relaxed" style={{ fontSize: "var(--fluid-p)" }}>
                             Let's talk about your idea. No commitment, no sales pitch—just an honest conversation about whether this is the right fit.
                         </p>
                         <Button href="https://calendar.app.google/66rqVeepUyMsziNfA" size="lg" external>

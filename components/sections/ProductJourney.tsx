@@ -68,7 +68,7 @@ export default function ProductJourney() {
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6 relative z-10">
                     {processes.map((process, index) => (
-                        <div key={process.id} className="relative pl-16 md:pl-0 md:pt-16 group">
+                        <div key={process.id} className="relative pl-12 md:pl-0 md:pt-16 group">
 
                             {/* Timeline Node */}
                             <motion.div
@@ -76,7 +76,7 @@ export default function ProductJourney() {
                                 whileInView={{ scale: 1, opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.4, type: "spring", stiffness: 200, damping: 20 }}
-                                className="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-0 md:top-[16px] w-4 h-4 rounded-full bg-card border-2 border-accent shadow-[0_0_0_4px_rgba(var(--background-rgb))] z-20"
+                                className="absolute left-[20px] md:left-1/2 md:-translate-x-1/2 top-0 md:top-[16px] w-4 h-4 rounded-full bg-card border-2 border-accent shadow-[0_0_0_4px_rgba(var(--background-rgb))] z-20"
                             >
                                 <div className="absolute inset-0 rounded-full bg-accent animate-ping opacity-20" />
                             </motion.div>

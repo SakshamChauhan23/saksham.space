@@ -26,7 +26,7 @@ export default function Section({
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6 }}
-            className={`section ${fullWidth ? "" : "container"} ${className}`}
+            className={`section ${fullWidth ? "" : "site-container"} ${className}`}
         >
             {children}
         </motion.section>
@@ -59,7 +59,7 @@ export function SectionHeader({
                     {eyebrow}
                 </span>
             )}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h2 className="font-bold text-foreground mb-4" style={{ fontSize: "var(--fluid-h2)" }}>
                 {title}
             </h2>
             {description && (

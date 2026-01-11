@@ -55,7 +55,7 @@ export default function CollaborationOptions() {
                         <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-8 group-hover:scale-110 transition-transform duration-300">
                             {option.icon}
                         </div>
-                        <h3 className="text-2xl font-bold mb-3">{option.title}</h3>
+                        <h3 className="font-bold mb-3" style={{ fontSize: "var(--fluid-h3)" }}>{option.title}</h3>
                         <p className="text-base text-muted mb-8">{option.description}</p>
 
                         <ul className="space-y-4 mb-10 flex-grow">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -36,16 +37,22 @@ export default function Header() {
                 : "bg-transparent"
                 }`}
         >
-            <nav className="container flex items-center justify-between h-16 md:h-20">
+            <nav className="site-container flex items-center justify-between h-16 md:h-20">
                 {/* Logo */}
                 <Link href="/" className="relative z-10">
-                    <motion.span
-                        className="text-xl md:text-2xl font-bold gradient-text"
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 400 }}
+                        className="relative w-40 h-10 md:w-48 md:h-12"
                     >
-                        saksham.space
-                    </motion.span>
+                        <Image
+                            src="/logo.svg"
+                            alt="saksham.space"
+                            fill
+                            className="object-contain object-left"
+                            priority
+                        />
+                    </motion.div>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -110,7 +117,7 @@ export default function Header() {
                         transition={{ duration: 0.3 }}
                         className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
                     >
-                        <ul className="container py-6 space-y-4">
+                        <ul className="site-container py-6 space-y-4">
                             {navItems.map((item, index) => (
                                 <motion.li
                                     key={item.name}

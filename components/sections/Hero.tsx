@@ -29,13 +29,12 @@ export default function Hero() {
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Main Headline */}
                     <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-foreground mb-8 leading-[1.1]"
+                        className="font-bold tracking-tighter text-foreground mb-6 md:mb-8 leading-[1.1]"
+                        style={{ fontSize: "var(--fluid-h1)" }}
                     >
-                        Discovering the Right Product. <br className="hidden md:block" />
-                        <span className="gradient-text">Building it Right.</span>
+                        Building Products That Ship. <br className="hidden md:block" />
+                        <span className="gradient-text">Not Just Roadmaps.</span>
                     </motion.h1>
 
                     {/* Subheadline */}
@@ -43,9 +42,10 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed"
+                        className="text-muted max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed"
+                        style={{ fontSize: "var(--fluid-p)" }}
                     >
-                        I identify high-impact opportunities and lead cross-functional teams to deliver measurable business outcomes.
+                        I combine strategic thinking with hands-on execution. From problem identification to shipped product, I use modern tools (AI, no-code, automation) to move fast without sacrificing quality.
                     </motion.p>
 
                     {/* CTA Buttons */}

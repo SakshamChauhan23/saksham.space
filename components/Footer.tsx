@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="bg-background border-t border-border pt-16 pb-8">
-            <div className="container">
+            <div className="site-container">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                     {/* Left Column */}
                     <div>

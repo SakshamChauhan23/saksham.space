@@ -43,7 +43,7 @@ export default function SelectedWork() {
                                         </span>
                                         <span className="text-xs font-medium text-muted">{project.hook}</span>
                                     </div>
-                                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                                    <h3 className="font-bold text-foreground mb-2 group-hover:text-accent transition-colors" style={{ fontSize: "var(--fluid-h3)" }}>
                                         {project.title}
                                     </h3>
                                     <p className="text-lg text-muted font-medium">{project.subtitle}</p>

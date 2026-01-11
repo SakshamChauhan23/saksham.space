@@ -24,6 +24,16 @@
   --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   --gradient-subtle: linear-gradient(135deg, #f5f7ff 0%, #f0e7ff 100%);
 
+  /* Fluid Typography */
+  --fluid-h1: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  --fluid-h2: clamp(2rem, 4vw + 0.5rem, 3rem);
+  --fluid-h3: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+  --fluid-p: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+
+  /* Fluid Spacing */
+  --fluid-section-spacing: clamp(3rem, 8vw, 6rem);
+  --fluid-container-padding: clamp(1.5rem, 4vw, 3rem);
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
@@ -208,26 +218,33 @@ h6 {
 }
 
 /* Container */
-.container {
+.site-container {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  padding-left: var(--fluid-container-padding);
+  padding-right: var(--fluid-container-padding);
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
+
+  /* Fluid padding handles this now */
+  .site-container {
+    padding: 0 var(--fluid-container-padding);
   }
 }
 
 /* Section Spacing */
+/* Section Spacing */
 .section {
-  padding: 3rem 0;
+  padding: var(--fluid-section-spacing) 0;
 }
 
 @media (min-width: 768px) {
+
+  /* Fluid spacing handles this now */
   .section {
-    padding: 4rem 0;
+    padding: var(--fluid-section-spacing) 0;
   }
 }
