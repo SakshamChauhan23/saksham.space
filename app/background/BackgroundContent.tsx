@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/AnimatedText";
 const experience = [
     {
         role: "Product Manager",
-        period: "Apr 2023 – Present",
+        period: "Apr 2025 – Present",
         company: "Navgurukul",
         location: "Gurugram, India",
         description: "Leading product for internal admissions and learning systems.",
@@ -25,7 +25,7 @@ const experience = [
     },
     {
         role: "Associate Product Manager",
-        period: "Jun 2023 – Present",
+        period: "June 2023 - March 2025",
         company: "OneDigiStore",
         location: "Hyderabad, India",
         description: "Leading the evolution of SMGenie, a workflow platform for design & marketing agencies.",
