@@ -1,9 +1,48 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ScrollProgress from "@/components/ScrollProgress";
 import ScrollToTop from "@/components/ScrollToTop";
 import CursorFollower from "@/components/CursorFollower";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://saksham.space/#website",
+      url: "https://saksham.space",
+      name: "saksham.space",
+      description:
+        "Product Manager specializing in rapid MVP development using AI and no-code tools.",
+      publisher: { "@id": "https://saksham.space/#person" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Person",
+      "@id": "https://saksham.space/#person",
+      name: "Saksham Chauhan",
+      url: "https://saksham.space",
+      jobTitle: "Product Manager",
+      description:
+        "Product Builder & 0-to-1 Specialist. Building products that ship using AI, no-code, and modern tools.",
+      sameAs: [
+        "https://www.linkedin.com/in/sakshamchauhan/",
+        "https://x.com/SakshamCh2302",
+        "https://indianproductguy.substack.com/",
+      ],
+      knowsAbout: [
+        "Product Management",
+        "MVP Development",
+        "AI Tools",
+        "No-code Development",
+        "Product Strategy",
+        "Workflow Automation",
+      ],
+    },
+  ],
+};
 
 const inter = Inter({
   variable: "--font-inter",
@@ -76,6 +115,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased bg-background text-foreground`}
         suppressHydrationWarning

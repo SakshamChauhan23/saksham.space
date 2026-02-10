@@ -27,10 +27,10 @@ export default function NotFound() {
                         Go Home
                     </Link>
                     <Link
-                        href="/portfolio"
+                        href="/about"
                         className="px-6 py-3 border-2 border-foreground text-foreground rounded-full font-medium hover:bg-foreground hover:text-background transition-colors"
                     >
-                        View Portfolio
+                        About Me
                     </Link>
                 </div>
             </div>

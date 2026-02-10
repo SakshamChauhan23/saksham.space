@@ -136,10 +136,10 @@ export default function AboutContent() {
                             className="relative w-72 h-72 md:w-96 md:h-96"
                         >
                             <div className="absolute inset-0 bg-accent/20 rounded-3xl rotate-6 blur-2xl" />
-                            <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-border shadown-2xl">
+                            <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-border shadow-2xl">
                                 <Image
                                     src="/profile.png"
-                                    alt="Saksham Chauhan"
+                                    alt="Saksham Chauhan - Product Manager and Builder specializing in 0-to-1 products"
                                     fill
                                     className="object-cover"
                                     priority

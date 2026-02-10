@@ -1,11 +1,14 @@
 {
-    "name": "saksham.space",
+    "name": "Saksham Chauhan - Product Builder & 0-to-1 Specialist",
     "short_name": "Saksham",
-    "description": "Product Builder & 0-to-1 Specialist",
+    "description": "Product Manager specializing in rapid MVP development using AI and no-code tools. From idea to working product in 30-45 days.",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
-    "background_color": "#09090b",
+    "background_color": "#fafafa",
     "theme_color": "#6366f1",
+    "lang": "en",
+    "categories": ["business", "productivity"],
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -16,6 +19,12 @@
             "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }

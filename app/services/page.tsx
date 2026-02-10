@@ -1,17 +1,30 @@
-import Header from "@/components/Header";
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import ServicesContent from "./ServicesContent";
 
-export const metadata = {
-    title: "Build Products | Saksham - 0 to 1 Product Build",
-    description: "30–45 Day MVP Sprint. From idea to working product using AI, no-code, and pragmatic engineering.",
+export const metadata: Metadata = {
+    title: "AI Automation Services - Eliminate 20+ Hours of Manual Work Weekly",
+    description:
+        "Free audit reveals where time disappears. Custom AI automation eliminates manual workflows in 2 weeks.",
+    alternates: { canonical: "/services" },
+    openGraph: {
+        title: "AI Automation Services - Eliminate Manual Workflows",
+        description:
+            "Custom AI automation eliminates manual workflows in 2 weeks.",
+        url: "https://saksham.space/services",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "AI Automation Services - Eliminate Manual Workflows",
+        description:
+            "Custom AI automation eliminates manual workflows in 2 weeks.",
+    },
 };
 
 export default function ServicesPage() {
     return (
         <>
-            <Header />
-            <main className="pt-20">
+            <main>
                 <ServicesContent />
             </main>
             <Footer />

@@ -184,6 +184,13 @@ export default function SelectedWork() {
                                             </div>
                                         </div>
 
+                                        {/* CTA in Case Study */}
+                                        <div className="flex justify-center mt-10">
+                                            <Button href="https://calendar.app.google/66rqVeepUyMsziNfA" size="lg" external className="rounded-full">
+                                                Book a Free Audit
+                                            </Button>
+                                        </div>
+
                                     </div>
                                 </motion.div>
                             )}

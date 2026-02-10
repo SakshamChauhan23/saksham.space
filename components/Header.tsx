@@ -37,9 +37,9 @@ export default function Header() {
                 : "bg-transparent"
                 }`}
         >
-            <nav className="site-container flex items-center justify-between h-16 md:h-20">
+            <nav className="site-container flex items-center justify-between h-16 md:h-20" aria-label="Main navigation">
                 {/* Logo */}
-                <Link href="/" className="relative z-10">
+                <Link href="/" className="relative z-10" aria-label="saksham.space - Go to homepage">
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 400 }}
@@ -47,7 +47,7 @@ export default function Header() {
                     >
                         <Image
                             src="/logo.svg"
-                            alt="saksham.space"
+                            alt="Saksham Chauhan - Product Builder & 0-to-1 Specialist"
                             fill
                             className="object-contain object-left"
                             priority
@@ -88,7 +88,8 @@ export default function Header() {
                 <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     className="relative z-10 md:hidden p-2"
-                    aria-label="Toggle menu"
+                    aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isMobileMenuOpen}
                 >
                     <div className="w-6 h-5 flex flex-col justify-between">
                         <motion.span
@@ -115,7 +116,7 @@ export default function Header() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
+                        className="md:hidden bg-background backdrop-blur-lg border-b border-border"
                     >
                         <ul className="site-container py-6 space-y-4">
                             {navItems.map((item, index) => (
@@ -138,15 +139,17 @@ export default function Header() {
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: navItems.length * 0.1 }}
-                                className="pt-4"
+                                className="pt-4 flex justify-center"
                             >
-                                <Link
-                                    href="#contact"
+                                <a
+                                    href="https://calendar.app.google/66rqVeepUyMsziNfA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="inline-block px-6 py-3 text-sm font-medium rounded-full bg-accent text-white hover:bg-accent-hover transition-colors"
                                 >
                                     Let&apos;s Talk
-                                </Link>
+                                </a>
                             </motion.li>
                         </ul>
                     </motion.div>

@@ -1,5 +1,14 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /_next/static/
+Disallow: /api/
 
+# Sitemaps
 Sitemap: https://saksham.space/sitemap.xml
+
+# Crawl-delay (optional, respected by some bots)
+# Crawl-delay: 1
+
+# Host
+Host: https://saksham.space
