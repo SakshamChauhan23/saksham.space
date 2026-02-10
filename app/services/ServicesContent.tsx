@@ -256,7 +256,7 @@ export default function ServicesContent() {
                     className="relative z-10 w-full mt-20"
                 >
                     <p className="text-sm text-muted-foreground text-center uppercase tracking-widest mb-8 font-medium">
-                        TRUSTED BY INNOVATIVE TEAMS
+                        TOOLS & TECHNOLOGIES
                     </p>
                     <div className="relative overflow-hidden w-full">
                         {/* Fade edges */}
@@ -279,13 +279,6 @@ export default function ServicesContent() {
                                 </div>
                             ))}
                         </div>
-                    </div>
-
-                    {/* CTA after Tools */}
-                    <div className="flex justify-center mt-16">
-                        <Button href="https://calendar.app.google/66rqVeepUyMsziNfA" size="lg" external className="rounded-full">
-                            Book a Free Audit
-                        </Button>
                     </div>
                 </motion.div>
             </section>
