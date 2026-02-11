@@ -40,7 +40,7 @@ export default function Hero() {
                 }}
             />
 
-            <div className="container relative z-10 pt-40 pb-12 md:pt-48 md:pb-16">
+            <div className="site-container relative z-10 pt-32 pb-12 md:pt-48 md:pb-16">
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Main Headline */}
                     <motion.h1
