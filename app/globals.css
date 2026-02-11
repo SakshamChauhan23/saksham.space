@@ -207,6 +207,7 @@ h6 {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -249,7 +250,8 @@ h6 {
 
   /* Fluid padding handles this now */
   .site-container {
-    padding: 0 var(--fluid-container-padding);
+    padding-left: var(--fluid-container-padding);
+    padding-right: var(--fluid-container-padding);
   }
 }
 
