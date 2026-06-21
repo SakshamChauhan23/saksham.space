@@ -41,44 +41,68 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0E0E10",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
   title: {
-    default: "Saksham Chauhan — Product Manager",
+    default: "Saksham Chauhan — AI Product Manager & Builder",
     template: "%s | Saksham Chauhan",
   },
   description:
-    "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used, increasingly using AI to remove real work. Writing Ground Truth on building, adoption, and product judgment.",
+    "Saksham Chauhan is an AI product manager and builder who turns complex problems into practical software that gets used. Working at the intersection of AI, automation, and zero-to-one product development.",
   keywords: [
-    "Product Manager",
-    "AI Product",
+    "Saksham Chauhan",
+    "AI Product Manager",
+    "Product Builder",
+    "Product Manager India",
+    "AI Product Management",
+    "Zero to One Product",
+    "Product Manager Builder",
+    "AI Automation Product",
+    "EdTech Product Manager",
+    "Ground Truth Substack",
     "Management Consultancy",
     "Product Strategy",
-    "Zero to One",
-    "Saksham Chauhan",
   ],
-  authors: [{ name: "Saksham Chauhan" }],
+  authors: [{ name: "Saksham Chauhan", url: "https://saksham.space" }],
   creator: "Saksham Chauhan",
+  publisher: "Saksham Chauhan",
   metadataBase: new URL("https://saksham.space"),
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/saksham.png", type: "image/png" },
+    ],
+    apple: "/saksham.png",
+    shortcut: "/saksham.png",
+  },
   openGraph: {
-    title: "Saksham Chauhan — Product Manager",
+    title: "Saksham Chauhan — AI Product Manager & Builder",
     description:
-      "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used.",
+      "Building practical software that gets used. AI product manager with a builder's background working at the intersection of AI, automation, and zero-to-one product development.",
     url: "https://saksham.space",
     siteName: "saksham.space",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Saksham Chauhan — AI Product Manager & Builder",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saksham Chauhan — Product Manager",
+    title: "Saksham Chauhan — AI Product Manager & Builder",
     description:
-      "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used.",
+      "Building practical software that gets used. AI product manager working at the intersection of AI, automation, and zero-to-one product development.",
+    creator: "@SakshamCh2302",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
