@@ -1,72 +1,119 @@
 "use client";
 
-import Link from "next/link";
-import Section, { SectionHeader } from "@/components/Section";
-import Button from "@/components/Button";
-
-const articles = [
-    {
-        title: "Why I stopped treating APIs as just technical details",
-        description: "Understanding APIs as products themselves changed how I approach integration and platform strategy.",
-        meta: "Substack",
-        tags: ["Product Strategy", "Technical PM", "API"],
-        href: "https://indianproductguy.substack.com/p/why-i-stopped-treating-apis-as-just"
-    },
-    {
-        title: "Here's How I Automated 8 Hours of Recruiter Busywork",
-        description: "A practical breakdown of building an end-to-end automation suite for agency recruiters using No-Code tools.",
-        meta: "Substack",
-        tags: ["Automation", "No-code", "Operations"],
-        href: "https://indianproductguy.substack.com/p/heres-how-i-automated-8-hours-of"
-    }
-];
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Writing() {
-    return (
-        <Section>
-            <SectionHeader
-                eyebrow="Insights"
-                title="Thoughts & Learnings"
-                description="Deep dives into product strategy, technical execution, and the lessons learned from building."
-            />
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mb-12">
-                {articles.map((article, index) => (
-                    <Link
-                        key={index}
-                        href={article.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block bg-card border border-border rounded-3xl p-8 hover:border-accent/40 transition-all hover:-translate-y-1 h-full flex flex-col"
-                    >
-                        <div className="flex gap-2 mb-4 flex-wrap">
-                            {article.tags.map(tag => (
-                                <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-accent/5 text-accent">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                        <h3 className="text-lg font-bold mb-3 group-hover:text-accent transition-colors">
-                            {article.title}
-                        </h3>
-                        <p className="text-sm text-muted leading-relaxed mb-6 flex-grow">
-                            {article.description}
-                        </p>
-                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
-                            <span className="text-xs font-medium text-muted-foreground">{article.meta}</span>
-                            <span className="text-xs font-bold text-foreground group-hover:translate-x-1 transition-transform">
-                                Read on Substack →
-                            </span>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+  return (
+    <section
+      id="writing"
+      ref={ref}
+      style={{
+        
+        padding: "clamp(5rem, 14vh, 11rem) 0",
+        overflow: "hidden",
+      }}
+    >
+      <div className="site-container">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr auto",
+            gap: "clamp(3rem, 8vw, 8rem)",
+            alignItems: "end",
+          }}
+          className="writing-grid"
+        >
+          {/* Left */}
+          <motion.div style={{ y }}>
+            <p className="section-label" style={{ marginBottom: "clamp(1.5rem, 4vh, 3rem)" }}>
+              Writing
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(2.25rem, 5vw, 5.5rem)",
+                fontWeight: 400,
+                letterSpacing: "-0.035em",
+                lineHeight: 1.0,
+                color: "var(--fg)",
+                marginBottom: "clamp(1.5rem, 3.5vh, 3rem)",
+              }}
+            >
+              Ground Truth
+            </h2>
+            <p
+              className="body-text"
+              style={{ maxWidth: "38ch", marginBottom: "2.5rem" }}
+            >
+              Notes from the actual work, including the parts I get wrong. Building with AI, getting products adopted, and the judgment calls in between.
+            </p>
+            <a
+              href="https://sakshamspace.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-link"
+              style={{ fontSize: "0.875rem", letterSpacing: "0.02em" }}
+            >
+              Read on Substack →
+            </a>
+          </motion.div>
 
-            <div className="text-center">
-                <Button href="/blog" variant="secondary">
-                    View All
-                </Button>
-            </div>
-        </Section>
-    );
+          {/* Right: circular subscribe button */}
+          <div style={{ flexShrink: 0 }}>
+            <a
+              href="https://sakshamspace.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                width: "clamp(120px, 13vw, 160px)",
+                height: "clamp(120px, 13vw, 160px)",
+                borderRadius: "50%",
+                border: "1px solid var(--teal)",
+                color: "var(--teal)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textDecoration: "none",
+                fontSize: "0.8125rem",
+                letterSpacing: "0.04em",
+                fontWeight: 500,
+                transition: "background 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.16,1,0.3,1)",
+                flexShrink: 0,
+              }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget;
+                el.style.background = "var(--teal)";
+                el.style.color = "var(--bg)";
+                el.style.transform = "scale(1.08)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget;
+                el.style.background = "transparent";
+                el.style.color = "var(--teal)";
+                el.style.transform = "scale(1)";
+              }}
+              data-cursor-hover
+            >
+              Subscribe
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .writing-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+    </section>
+  );
 }

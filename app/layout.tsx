@@ -2,9 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ScrollProgress from "@/components/ScrollProgress";
-import ScrollToTop from "@/components/ScrollToTop";
-import CursorFollower from "@/components/CursorFollower";
+import SplashScreen from "@/components/SplashScreen";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -15,7 +13,7 @@ const jsonLd = {
       url: "https://saksham.space",
       name: "saksham.space",
       description:
-        "Product Manager specializing in rapid MVP development using AI and no-code tools.",
+        "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used.",
       publisher: { "@id": "https://saksham.space/#person" },
       inLanguage: "en-US",
     },
@@ -26,19 +24,11 @@ const jsonLd = {
       url: "https://saksham.space",
       jobTitle: "Product Manager",
       description:
-        "Product Builder & 0-to-1 Specialist. Building products that ship using AI, no-code, and modern tools.",
+        "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used, increasingly using AI to remove real work.",
       sameAs: [
         "https://www.linkedin.com/in/sakshamchauhan/",
         "https://x.com/SakshamCh2302",
-        "https://indianproductguy.substack.com/",
-      ],
-      knowsAbout: [
-        "Product Management",
-        "MVP Development",
-        "AI Tools",
-        "No-code Development",
-        "Product Strategy",
-        "Workflow Automation",
+        "https://substack.com/@sakshamchauhan",
       ],
     },
   ],
@@ -51,48 +41,44 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
-  ],
+  themeColor: "#0E0E10",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
   title: {
-    default: "Saksham | Product Builder & 0-to-1 Specialist",
-    template: "%s | Saksham",
+    default: "Saksham Chauhan — Product Manager",
+    template: "%s | Saksham Chauhan",
   },
-  description: "Product Manager specializing in rapid MVP development using AI and no-code tools. From idea to working product in 30-45 days.",
-  keywords: ["Product Manager", "MVP Development", "AI", "No-code", "Startup", "Early-stage", "Product Builder", "Founder"],
-  authors: [{ name: "Saksham" }],
-  creator: "Saksham",
+  description:
+    "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used, increasingly using AI to remove real work. Writing Ground Truth on building, adoption, and product judgment.",
+  keywords: [
+    "Product Manager",
+    "AI Product",
+    "Management Consultancy",
+    "Product Strategy",
+    "Zero to One",
+    "Saksham Chauhan",
+  ],
+  authors: [{ name: "Saksham Chauhan" }],
+  creator: "Saksham Chauhan",
   metadataBase: new URL("https://saksham.space"),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Saksham | Product Builder & 0-to-1 Specialist",
-    description: "I build 0-to-1 products for early-stage founders - fast.",
+    title: "Saksham Chauhan — Product Manager",
+    description:
+      "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used.",
     url: "https://saksham.space",
     siteName: "saksham.space",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Saksham - Product Builder",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saksham | Product Builder & 0-to-1 Specialist",
-    description: "I build 0-to-1 products for early-stage founders - fast.",
-    images: ["/og-image.png"],
+    title: "Saksham Chauhan — Product Manager",
+    description:
+      "Product manager with a builder's background. I help organisations decide what to build and make sure it gets used.",
   },
   robots: {
     index: true,
@@ -105,7 +91,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -116,9 +101,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <Script
           id="json-ld"
           type="application/ld+json"
@@ -127,13 +109,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} font-sans antialiased bg-background text-foreground`}
+        className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-        <ScrollProgress />
-        <CursorFollower />
+        <SplashScreen />
         {children}
-        <ScrollToTop />
       </body>
     </html>
   );

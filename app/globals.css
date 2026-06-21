@@ -1,270 +1,245 @@
 @import "tailwindcss";
 
-/* ============================================
-   Design System - saksham.space
-   Minimal, elegant, animated portfolio
-   ============================================ */
-
 :root {
-  /* Core Colors - Light Mode */
-  --background: #fafafa;
-  --foreground: #0a0a0a;
-  --muted: #52525b;
-  --muted-foreground: #71717a;
-  --border: #e4e4e7;
-  --card: #ffffff;
-  --card-foreground: #0a0a0a;
-
-  /* Accent Colors */
-  --accent: #6366f1;
-  --accent-hover: #4f46e5;
-  --accent-muted: #e0e7ff;
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  --gradient-subtle: linear-gradient(135deg, #f5f7ff 0%, #f0e7ff 100%);
-
-  /* Fluid Typography - Optimized for mobile readability */
-  --fluid-h1: clamp(2.25rem, 5vw + 1rem, 4.5rem);
-  --fluid-h2: clamp(1.875rem, 4vw + 0.5rem, 3rem);
-  --fluid-h3: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
-  --fluid-p: clamp(1rem, 1vw + 0.5rem, 1.25rem);
-
-  /* Fluid Spacing */
-  --fluid-section-spacing: clamp(3rem, 8vw, 6rem);
-  --fluid-container-padding: clamp(1.5rem, 4vw, 3rem);
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
-}
-
-/* Dark Mode - triggered by .dark class on html */
-html.dark {
-  /* Core Colors - Dark Mode */
-  --background: #09090b;
-  --foreground: #fafafa;
-  --muted: #a1a1aa;
-  --muted-foreground: #71717a;
-  --border: #27272a;
-  --card: #18181b;
-  --card-foreground: #fafafa;
-
-  /* Accent Colors - monochrome in dark mode */
-  --accent: #fafafa;
-  --accent-hover: #e4e4e7;
-  --accent-muted: #27272a;
-
-  /* Gradients - grayscale */
-  --gradient-primary: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
-  --gradient-subtle: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 60px rgba(250, 250, 250, 0.1);
+  --bg: #ffffff;
+  --bg-alt: #f0ede8;
+  --fg: #000000;
+  --fg-muted: rgba(0, 0, 0, 0.45);
+  --fg-dim: rgba(0, 0, 0, 0.15);
+  --primary: #afd1ff;
+  --secondary: #1377ff;
+  --line: rgba(0, 0, 0, 0.1);
+  --font: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-accent-muted: var(--accent-muted);
-  --font-sans: var(--font-inter);
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
 }
 
-/* Base Styles */
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  cursor: auto !important;
 }
 
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+* {
+  cursor: inherit;
 }
 
-/* Selection */
-::selection {
-  background: var(--accent);
-  color: white;
+a, button, [role="button"], label[for] {
+  cursor: pointer !important;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+@media (pointer: coarse) {
+  body { cursor: auto; }
+  *, *::before, *::after { cursor: auto !important; }
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--muted-foreground);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted);
-}
-
-/* Focus Styles */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* Animation Utilities */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse-glow {
-
-  0%,
-  100% {
-    box-shadow: var(--shadow-glow);
-  }
-
-  50% {
-    box-shadow: 0 0 60px rgba(99, 102, 241, 0.3);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
-}
-
-.animate-slide-up {
-  animation: slide-up 0.6s ease-out forwards;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Infinite Marquee */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-/* Gradient Text */
-.gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Glass Effect */
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Container */
 .site-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 5rem);
+}
+
+.hero-title {
+  font-size: clamp(2.75rem, 6vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+}
+
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.work-title {
+  font-size: clamp(1.75rem, 3.5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: var(--fg);
+  transition: color 0.3s ease;
+}
+
+.body-text {
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  line-height: 1.75;
+  color: var(--fg-muted);
+}
+
+.small-text {
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  color: var(--fg-muted);
+}
+
+.work-row {
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.work-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.work-row .work-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--secondary);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-row:hover .work-underline {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  padding-left: var(--fluid-container-padding);
-  padding-right: var(--fluid-container-padding);
 }
 
-@media (min-width: 768px) {
-
-  /* Fluid padding handles this now */
-  .site-container {
-    padding-left: var(--fluid-container-padding);
-    padding-right: var(--fluid-container-padding);
-  }
+.work-row:hover .work-title {
+  color: var(--secondary);
 }
 
-/* Section Spacing */
-/* Section Spacing */
-.section {
-  padding: var(--fluid-section-spacing) 0;
+.principle-item {
+  border-top: 1px solid var(--line);
 }
 
-@media (min-width: 768px) {
-
-  /* Fluid spacing handles this now */
-  .section {
-    padding: var(--fluid-section-spacing) 0;
-  }
+.principle-item:last-child {
+  border-bottom: 1px solid var(--line);
 }
+
+.underline-link {
+  position: relative;
+  display: inline-block;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.underline-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--secondary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.underline-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: 1.5px solid var(--secondary);
+  color: var(--secondary);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--line);
+  color: var(--fg-muted);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  border-color: var(--fg);
+  color: var(--fg);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.35; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(0.55); }
+}
+
+.scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--secondary));
+  transform-origin: top;
+  animation: scroll-pulse 2.2s ease-in-out infinite;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .three-scene { opacity: 0.4; }
+}
+
+/* Bento card accent line */
+.card-accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1377ff, #afd1ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover .bento-accent {
+  transform: scaleX(1);
+}
+

@@ -1,32 +1,27 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MarqueeBelt from "@/components/MarqueeBelt";
 import Hero from "@/components/sections/Hero";
-import ProductJourney from "@/components/sections/ProductJourney";
+import Statement from "@/components/sections/Statement";
 import SelectedWork from "@/components/sections/SelectedWork";
-import CollaborationOptions from "@/components/sections/CollaborationOptions";
 import Writing from "@/components/sections/Writing";
-import FinalCTA from "@/components/sections/FinalCTA";
+import Connect from "@/components/sections/Connect";
+import { ThreeSceneClient as ThreeScene } from "@/components/ClientOnly";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <>
+      <ThreeScene />
       <Header />
-
-      <div className="flex flex-col gap-0">
+      <main>
         <Hero />
-        <ProductJourney />
-        <div id="portfolio">
-          <SelectedWork />
-        </div>
-
-        <CollaborationOptions />
+        <Statement />
+        <SelectedWork />
         <Writing />
-        <div id="contact">
-          <FinalCTA />
-        </div>
-      </div>
-
+        <Connect />
+      </main>
+      <MarqueeBelt />
       <Footer />
-    </main>
+    </>
   );
 }
