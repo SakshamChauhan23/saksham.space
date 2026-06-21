@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Saksham Chauhan — AI Product Manager & Builder",
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     description:
       "Building practical software that gets used. AI product manager working at the intersection of AI, automation, and zero-to-one product development.",
     creator: "@SakshamCh2302",
-    images: ["/opengraph-image"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
