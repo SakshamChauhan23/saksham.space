@@ -4,10 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const navItems: { label: string; href: string; download?: boolean }[] = [
+const navItems: { label: string; href: string; download?: boolean; external?: boolean }[] = [
   { label: "Home",    href: "/" },
   { label: "Writing", href: "/#writing" },
   { label: "Work",    href: "/#work" },
+  { label: "Email",   href: "mailto:sakshamchauhan23@gmail.com", external: true },
   { label: "Resume",  href: "/Saksham_Chauhan_Resume.pdf", download: true },
 ];
 
@@ -110,48 +111,38 @@ export default function Header() {
             boxShadow: "0 2px 16px rgba(0,0,0,0.07)",
           }}
         >
-          {navItems.map((item) =>
-            item.download ? (
-              <a
-                key={item.label}
-                href={item.href}
-                download
-                className="nav-pill-link"
-                style={{
-                  display: "block",
-                  padding: "0.45rem 1.25rem",
-                  borderRadius: "999px",
-                  fontSize: "0.875rem",
-                  fontWeight: 450,
-                  color: "var(--fg-muted)",
-                  textDecoration: "none",
-                  transition: "background 0.2s ease, color 0.2s ease",
-                  whiteSpace: "nowrap" as const,
-                }}
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="nav-pill-link"
-                style={{
-                  display: "block",
-                  padding: "0.45rem 1.25rem",
-                  borderRadius: "999px",
-                  fontSize: "0.875rem",
-                  fontWeight: 450,
-                  color: "var(--fg-muted)",
-                  textDecoration: "none",
-                  transition: "background 0.2s ease, color 0.2s ease",
-                  whiteSpace: "nowrap" as const,
-                }}
-              >
+          {navItems.map((item) => {
+            const linkStyle = {
+              display: "block",
+              padding: "0.45rem 1.25rem",
+              borderRadius: "999px",
+              fontSize: "0.875rem",
+              fontWeight: 450,
+              color: "var(--fg-muted)",
+              textDecoration: "none",
+              transition: "background 0.2s ease, color 0.2s ease",
+              whiteSpace: "nowrap" as const,
+            };
+            if (item.download) {
+              return (
+                <a key={item.label} href={item.href} download className="nav-pill-link" style={linkStyle}>
+                  {item.label}
+                </a>
+              );
+            }
+            if (item.external) {
+              return (
+                <a key={item.label} href={item.href} className="nav-pill-link" style={linkStyle}>
+                  {item.label}
+                </a>
+              );
+            }
+            return (
+              <Link key={item.label} href={item.href} className="nav-pill-link" style={linkStyle}>
                 {item.label}
               </Link>
-            )
-          )}
+            );
+          })}
         </nav>
 
         {/* Right — badges + mobile hamburger */}
