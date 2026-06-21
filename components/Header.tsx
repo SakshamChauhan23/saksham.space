@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const navItems = [
+const navItems: { label: string; href: string; download?: boolean }[] = [
   { label: "Home",    href: "/" },
   { label: "Writing", href: "/#writing" },
   { label: "Work",    href: "/#work" },
-  { label: "Resume",  href: "/resume" },
+  { label: "Resume",  href: "/Saksham_Chauhan_Resume.pdf", download: true },
 ];
 
 const badges = ["AI", "Automation", "0-to-1"];
@@ -110,26 +110,48 @@ export default function Header() {
             boxShadow: "0 2px 16px rgba(0,0,0,0.07)",
           }}
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="nav-pill-link"
-              style={{
-                display: "block",
-                padding: "0.45rem 1.25rem",
-                borderRadius: "999px",
-                fontSize: "0.875rem",
-                fontWeight: 450,
-                color: "var(--fg-muted)",
-                textDecoration: "none",
-                transition: "background 0.2s ease, color 0.2s ease",
-                whiteSpace: "nowrap" as const,
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.download ? (
+              <a
+                key={item.label}
+                href={item.href}
+                download
+                className="nav-pill-link"
+                style={{
+                  display: "block",
+                  padding: "0.45rem 1.25rem",
+                  borderRadius: "999px",
+                  fontSize: "0.875rem",
+                  fontWeight: 450,
+                  color: "var(--fg-muted)",
+                  textDecoration: "none",
+                  transition: "background 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap" as const,
+                }}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="nav-pill-link"
+                style={{
+                  display: "block",
+                  padding: "0.45rem 1.25rem",
+                  borderRadius: "999px",
+                  fontSize: "0.875rem",
+                  fontWeight: 450,
+                  color: "var(--fg-muted)",
+                  textDecoration: "none",
+                  transition: "background 0.2s ease, color 0.2s ease",
+                  whiteSpace: "nowrap" as const,
+                }}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Right — badges + mobile hamburger */}
@@ -198,25 +220,44 @@ export default function Header() {
         <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "2rem" }}>
           {navItems.map((item, idx) => (
             <li key={item.label}>
-              <Link
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                style={{
-                  fontSize: "clamp(2.5rem, 10vw, 4rem)",
-                  fontWeight: 400,
-                  letterSpacing: "-0.04em",
-                  color: "var(--fg)",
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: "1rem",
-                }}
-              >
-                <span style={{ fontSize: "0.75rem", color: "var(--fg-muted)", fontWeight: 400, letterSpacing: "0.05em" }}>
-                  0{idx + 1}
-                </span>
-                {item.label}
-              </Link>
+              {item.download ? (
+                <a
+                  href={item.href}
+                  download
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    fontSize: "clamp(2.5rem, 10vw, 4rem)",
+                    fontWeight: 400,
+                    letterSpacing: "-0.04em",
+                    color: "var(--fg)",
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "baseline",
+                    gap: "1rem",
+                  }}
+                >
+                  <span style={{ fontSize: "0.75rem", color: "var(--fg-muted)", fontWeight: 400, letterSpacing: "0.05em" }}>0{idx + 1}</span>
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    fontSize: "clamp(2.5rem, 10vw, 4rem)",
+                    fontWeight: 400,
+                    letterSpacing: "-0.04em",
+                    color: "var(--fg)",
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "baseline",
+                    gap: "1rem",
+                  }}
+                >
+                  <span style={{ fontSize: "0.75rem", color: "var(--fg-muted)", fontWeight: 400, letterSpacing: "0.05em" }}>0{idx + 1}</span>
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
