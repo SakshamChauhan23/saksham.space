@@ -195,6 +195,33 @@ export default function AdaptiveAssessment() {
           </div>
         </section>
 
+        {/* Outcome */}
+        <section style={{ padding: "clamp(4rem, 10vh, 8rem) 0" }}>
+          <div className="site-container">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(3rem, 8vw, 8rem)", alignItems: "start" }} className="case-body-grid">
+              <div style={{ position: "sticky", top: "7rem" }}>
+                <p className="section-label" style={{ marginBottom: "0.75rem" }}>Outcome</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--fg-muted)" }}>
+                  Work in progress. Prototype validated, development ongoing.
+                </p>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 5vh, 3.5rem)" }}>
+                <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
+                  The prototype demonstrated that personalised difficulty can be delivered at scale without any manual configuration per learner. Difficulty routing adjusts automatically based on performance signals, removing the need for a curriculum team to pre-assign tiers or manually review individual learner paths.
+                </p>
+                <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
+                  Completion rates in testing improved as learners no longer hit difficulty walls that were calibrated for an average rather than for them. The AI handled tier-based question routing end to end, which reduced the evaluator workload that previously came from reviewing submissions that were either too simple or too far out of reach to be meaningful.
+                </p>
+                <div style={{ padding: "clamp(1.5rem, 3vw, 2.5rem)", background: "#eef4ff", border: "1px solid rgba(19,119,255,0.15)" }}>
+                  <p style={{ fontSize: "clamp(1rem, 1.4vw, 1.1875rem)", lineHeight: 1.7, color: "var(--fg)" }}>
+                    The system is still being developed. What the prototype confirmed is that the core premise holds: adaptive difficulty is achievable at the infrastructure constraints of the learners it is built for.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Back nav */}
         <section style={{ padding: "clamp(3rem, 6vh, 4rem) 0" }}>
           <div className="site-container">

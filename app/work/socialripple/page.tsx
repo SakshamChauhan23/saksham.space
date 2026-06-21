@@ -154,6 +154,40 @@ export default function SocialRipple() {
           </div>
         </section>
 
+        {/* Outcome */}
+        <section style={{ padding: "clamp(4rem, 10vh, 8rem) 0" }}>
+          <div className="site-container">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(3rem, 8vw, 8rem)", alignItems: "start" }} className="case-body-grid">
+              <div style={{ position: "sticky", top: "7rem" }}>
+                <p className="section-label" style={{ marginBottom: "0.75rem" }}>Where it stands</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--fg-muted)" }}>
+                  Bootstrapped. In progress. Target: product market fit by end of 2026.
+                </p>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2rem, 5vh, 3.5rem)" }}>
+                <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
+                  SocialRipple is a bootstrapped startup. With external development support, the product moved from concept into early build. Business development outreach is underway and the company has acquired three working clients, validating the core value proposition before committing to a larger build.
+                </p>
+                <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
+                  The goal for the remainder of 2026 is to reach product market fit: a defined audience, a repeatable acquisition channel, and a product experience that earns retention without needing manual intervention. The work now shifts from strategy and structure to iteration on what the first clients are actually using and where they stop.
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "var(--line)" }}>
+                  {[
+                    { n: "3", label: "Working clients" },
+                    { n: "Active", label: "BD outreach" },
+                    { n: "2026", label: "PMF target" },
+                  ].map(({ n, label }) => (
+                    <div key={label} style={{ background: "var(--bg)", padding: "clamp(1.25rem, 3vw, 2rem)" }}>
+                      <p style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.5rem)", fontWeight: 300, letterSpacing: "-0.04em", color: "#1377ff", marginBottom: "0.2rem" }}>{n}</p>
+                      <p className="section-label">{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Back nav */}
         <section style={{ padding: "clamp(3rem, 6vh, 4rem) 0" }}>
           <div className="site-container">

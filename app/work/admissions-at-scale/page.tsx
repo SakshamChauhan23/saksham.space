@@ -199,6 +199,9 @@ export default function AdmissionsAtScale() {
                 <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
                   The four days an applicant used to wait on uncertain status is now thirty three hours, and that difference is measured in qualified applicants who stay in the process rather than dropping out of it.
                 </p>
+                <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
+                  Admissions volume grew without adding headcount. The coordination work that previously required people to manually check records across multiple files is now handled by the system itself. The team redirected that time toward conversations with applicants rather than administration of their data.
+                </p>
               </div>
             </div>
           </div>

@@ -185,17 +185,16 @@ export default function RecruitmentAutomation() {
                 {/* Outcome */}
                 <div>
                   <p className="section-label" style={{ marginBottom: "1.5rem", color: "#1377ff" }}>Outcome</p>
-                  <blockquote style={{
-                    borderLeft: "2px solid #1377ff",
-                    paddingLeft: "1.5rem",
-                    margin: "0 0 2rem",
-                  }}>
+                  <blockquote style={{ borderLeft: "2px solid #1377ff", paddingLeft: "1.5rem", margin: "0 0 2rem" }}>
                     <p style={{ fontSize: "clamp(1.125rem, 1.8vw, 1.5rem)", fontWeight: 400, letterSpacing: "-0.02em", lineHeight: 1.5, color: "var(--fg)" }}>
-                      &ldquo;The agency now has a pipeline that runs on system logic rather than individual effort and memory.&rdquo;
+                      &ldquo;Three layers. One system. The agency now has a recruitment operation that runs on logic rather than individual effort and memory.&rdquo;
                     </p>
                   </blockquote>
+                  <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)", marginBottom: "2rem" }}>
+                    The community layer, the qualification layer, and the outreach layer each solved a discrete gap, but together they form a single operating system for the recruitment team. Volume stayed the same. The work the team did to handle that volume changed completely.
+                  </p>
                   <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
-                    The three layers maintained existing volume while redirecting team focus toward pre-qualified requirements, accessible candidate pools, and strategic outreach aligned with confirmed needs.
+                    Pre-qualified requirements replaced open-ended briefs. An organised candidate community replaced scattered inboxes. Triggered outreach sequences replaced manual composition per search. The agency did not shrink the team to make this work. They redirected the team toward the work that actually required human judgment.
                   </p>
                 </div>
 
