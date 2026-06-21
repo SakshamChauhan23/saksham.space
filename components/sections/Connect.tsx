@@ -19,6 +19,13 @@ const contacts = [
     handle: "@SakshamCh2302",
   },
   {
+    platform: "Product Hunt",
+    description: "Products I have built and launched, all in one place.",
+    action: "View",
+    href: "https://www.producthunt.com/@saksham_chauhan23",
+    handle: "@saksham_chauhan23",
+  },
+  {
     platform: "Email",
     description: "For anything that warrants a proper conversation.",
     action: "Write",
@@ -73,7 +80,7 @@ export default function Connect() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(4, 1fr)",
             gap: "1px",
             background: "var(--line)",
           }}
@@ -177,7 +184,7 @@ export default function Connect() {
             grid-template-columns: 1fr !important;
           }
         }
-        @media (min-width: 768px) and (max-width: 1023px) {
+        @media (min-width: 768px) and (max-width: 1199px) {
           .connect-grid {
             grid-template-columns: repeat(2, 1fr) !important;
           }
