@@ -15,8 +15,8 @@ export default function Writing() {
     <section
       id="writing"
       ref={ref}
+      className="writing-section"
       style={{
-        
         padding: "clamp(5rem, 14vh, 11rem) 0",
         overflow: "hidden",
       }}
@@ -63,10 +63,32 @@ export default function Writing() {
             >
               Read on Substack →
             </a>
+
+            {/* Mobile-only subscribe pill */}
+            <a
+              href="https://sakshamspace.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="writing-subscribe-pill"
+              style={{
+                marginTop: "1.5rem",
+                alignItems: "center",
+                gap: "0.5rem",
+                padding: "0.65rem 1.5rem",
+                border: "1px solid #1377ff",
+                borderRadius: "999px",
+                fontSize: "0.8125rem",
+                fontWeight: 500,
+                color: "#1377ff",
+                textDecoration: "none",
+              }}
+            >
+              Subscribe on Substack
+            </a>
           </motion.div>
 
-          {/* Right: circular subscribe button */}
-          <div style={{ flexShrink: 0 }}>
+          {/* Right: circular subscribe button (desktop only) */}
+          <div className="writing-subscribe-circle" style={{ flexShrink: 0 }}>
             <a
               href="https://sakshamspace.substack.com/"
               target="_blank"
@@ -111,8 +133,13 @@ export default function Writing() {
         @media (max-width: 640px) {
           .writing-grid {
             grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
           }
+          .writing-subscribe-circle { display: none !important; }
+          .writing-subscribe-pill   { display: inline-flex !important; }
+          .writing-section { padding: 3.5rem 0 !important; }
         }
+        .writing-subscribe-pill { display: none; }
       `}</style>
     </section>
   );

@@ -85,6 +85,9 @@ export default function Header() {
           padding: "1rem clamp(1rem, 2.5vw, 2rem)",
           transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
           transform: visible ? "translateY(0)" : "translateY(-100%)",
+          background: "rgba(255,255,255,0.92)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
         }}
       >
         {/* Left — label */}
