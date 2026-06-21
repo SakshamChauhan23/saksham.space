@@ -222,8 +222,25 @@ section {
   z-index: 1;
 }
 
+/* Disable browser auto-hyphenation everywhere */
+* {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+}
+
 @media (max-width: 767px) {
   .three-scene { opacity: 0.4; }
+
+  /* Case study body grid: single column, disable sticky label */
+  .case-body-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* First child is always the sticky label col — neutralise stickiness so it
+     doesn't float over the content below when in single-column layout */
+  .case-body-grid > div:first-child {
+    position: static !important;
+  }
 }
 
 /* Bento card accent line */
