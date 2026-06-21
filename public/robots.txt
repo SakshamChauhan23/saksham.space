@@ -1,14 +1,80 @@
-# https://www.robotstxt.org/robotstxt.html
+# ─── Standard search crawlers ────────────────────────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /_next/static/
 Disallow: /api/
 
-# Sitemaps
+# ─── AI / LLM crawlers — explicitly welcomed ─────────────────────────────────
+
+# OpenAI (ChatGPT, GPT-4 browsing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft (Copilot, Bing AI)
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Apple (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+
+# Amazon (Alexa, Rufus)
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (used to train many LLMs)
+User-agent: CCBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# ─── Sitemaps ─────────────────────────────────────────────────────────────────
 Sitemap: https://saksham.space/sitemap.xml
+Sitemap: https://saksham.space/llms.txt
 
-# Crawl-delay (optional, respected by some bots)
-# Crawl-delay: 1
-
-# Host
+# ─── Canonical host ───────────────────────────────────────────────────────────
 Host: https://saksham.space

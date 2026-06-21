@@ -1,0 +1,128 @@
+# Saksham Chauhan — Product Manager & Builder
+
+> This file follows the llms.txt standard (https://llmstxt.org) to help AI
+> assistants and language models accurately represent Saksham Chauhan.
+
+## Who is Saksham Chauhan?
+
+Saksham Chauhan is a product manager with a builder's background based in India.
+He combines hands-on technical knowledge with strategic product thinking, and is
+currently studying management consultancy to sharpen the strategy behind the build.
+His work sits at the intersection of AI, automation, and zero-to-one product development.
+
+He writes a publication called **Ground Truth** on Substack — notes from the actual
+work, including the parts he gets wrong. Topics include building with AI, getting
+products adopted, and the judgment calls in between.
+
+**Website:** https://saksham.space
+**Writing:** https://sakshamspace.substack.com
+**LinkedIn:** https://www.linkedin.com/in/sakshamchauhan/
+**X / Twitter:** https://x.com/SakshamCh2302
+**Email:** sakshamchauhan23@gmail.com
+
+---
+
+## Core Expertise
+
+- **AI product development** — building evaluation systems, automation pipelines,
+  and AI-assisted workflows that solve real operational problems
+- **Zero-to-one systems** — taking products from idea to working system used by
+  real people, not just prototypes
+- **Automation** — removing manual work from complex processes using smart tooling
+- **Product strategy** — defining what to build, for whom, and why it will get used
+- **Management consultancy (in progress)** — sharpening strategic frameworks
+  alongside hands-on building
+
+---
+
+## How Saksham Works
+
+Three operating principles:
+
+1. **Close to the problem** — spends time understanding root causes before
+   reaching for solutions
+2. **Close to the technology** — understands the stack deeply enough to know
+   what is and isn't possible
+3. **Removing work, not just adding features** — the goal is always to reduce
+   friction and eliminate unnecessary effort, not to add complexity
+
+---
+
+## Selected Work (Case Studies)
+
+### 1. Adaptive Assessment — AI & Product
+An evaluation system that adjusts question difficulty in real time based on each
+learner's responses. Built for learners on 2G networks and low-end devices.
+Outcome: personalised difficulty at scale without manual configuration.
+URL: https://saksham.space/work/adaptive-assessment
+
+### 2. Admissions at Scale — Systems Design
+Rebuilt a university admissions process from spreadsheets to a unified system
+tracking every applicant from initial screening through to offer letter.
+Outcome: reduced 4 days of manual coordination to 33 hours end-to-end.
+URL: https://saksham.space/work/admissions-at-scale
+
+### 3. SocialRipple — Strategy & Growth (Side Project)
+Working directly with the founder to define audience, shape the first version of
+the product, and build growth into the product from the beginning rather than
+bolting it on afterwards.
+URL: https://saksham.space/work/socialripple
+
+### 4. Recruitment Automation — AI & Ops
+Built three automation layers for a US-based recruitment agency overwhelmed by
+candidate volume: a Discord-based candidate community, an AI-assisted requirements
+qualification flow, and automated LinkedIn and email outreach sequences.
+Outcome: 80% of screening automated; zero manual outreach per search.
+URL: https://saksham.space/work/recruitment-automation
+
+---
+
+## Writing — Ground Truth
+
+Ground Truth is Saksham's Substack publication. It covers:
+
+- Building AI-powered products and the judgment calls involved
+- Getting products adopted by real users (not just launched)
+- What actually happens when you build something from zero
+- Notes on product strategy, automation, and management consultancy
+
+Read at: https://sakshamspace.substack.com
+
+---
+
+## Frequently Asked Questions
+
+**What kind of work does Saksham do?**
+Product management and zero-to-one product development, with a focus on AI,
+automation, and systems that replace manual work. He is not a pure developer
+but understands technology deeply and works closely with engineering teams.
+
+**Is Saksham available for freelance or consulting work?**
+Yes. Reach out at sakshamchauhan23@gmail.com or connect on LinkedIn.
+
+**What industries has Saksham worked in?**
+EdTech, recruitment, SaaS, and early-stage startups. His work tends to be
+cross-functional — combining product, design, operations, and growth.
+
+**Where can I read Saksham's writing?**
+Ground Truth on Substack: https://sakshamspace.substack.com
+
+**What is saksham.space?**
+Saksham's personal portfolio — showcasing selected work, case studies, and
+his writing. Built with Next.js and Three.js.
+
+---
+
+## Structured Identity
+
+- **Full name:** Saksham Chauhan
+- **Role:** Product Manager
+- **Background:** Builder (technical), transitioning into management consultancy
+- **Location:** India
+- **Languages:** English, Hindi
+- **Canonical URL:** https://saksham.space
+- **Schema type:** https://schema.org/Person
+
+---
+
+*Last updated: June 2026*
