@@ -119,7 +119,7 @@ export default function AdaptiveAssessment() {
                     {[
                       {
                         n: "Adaptive logic",
-                        text: "Starts each learner at mid-level difficulty, then moves up or down by one level per question based on performance. Topic rotation is enforced so the system doesn't over-index on one area, and deduplication ensures no question repeats within a session. Difficulty correction happens within three questions.",
+                        text: "Starts each learner at mid level difficulty, then moves up or down by one level per question based on performance. Topic rotation is enforced so the system doesn't over index on one area, and deduplication ensures no question repeats within a session. Difficulty correction happens within three questions.",
                       },
                       {
                         n: "Answer evaluation",
@@ -170,7 +170,7 @@ export default function AdaptiveAssessment() {
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1px", background: "var(--line)", marginBottom: "2.5rem" }} className="proof-grid">
                     {[
                       { n: "&lt;1s",    label: "Answer evaluation time" },
-                      { n: "&lt;2s",    label: "End-to-end feedback" },
+                      { n: "&lt;2s",    label: "End to end feedback" },
                       { n: "3,000+",   label: "Learners on Zuvy Finishing School" },
                       { n: "2026",     label: "India AI Impact Summit casebook" },
                     ].map(({ n, label }) => (
@@ -210,7 +210,7 @@ export default function AdaptiveAssessment() {
                   The prototype demonstrated that personalised difficulty can be delivered at scale without any manual configuration per learner. Difficulty routing adjusts automatically based on performance signals, removing the need for a curriculum team to pre-assign tiers or manually review individual learner paths.
                 </p>
                 <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
-                  Completion rates in testing improved as learners no longer hit difficulty walls that were calibrated for an average rather than for them. The AI handled tier-based question routing end to end, which reduced the evaluator workload that previously came from reviewing submissions that were either too simple or too far out of reach to be meaningful.
+                  Completion rates in testing improved as learners no longer hit difficulty walls that were calibrated for an average rather than for them. The AI handled tier based question routing end to end, which reduced the evaluator workload that previously came from reviewing submissions that were either too simple or too far out of reach to be meaningful.
                 </p>
                 <div style={{ padding: "clamp(1.5rem, 3vw, 2.5rem)", background: "#eef4ff", border: "1px solid rgba(19,119,255,0.15)" }}>
                   <p style={{ fontSize: "clamp(1rem, 1.4vw, 1.1875rem)", lineHeight: 1.7, color: "var(--fg)" }}>

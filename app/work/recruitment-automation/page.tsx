@@ -5,7 +5,7 @@ import FeaturedImage from "@/components/FeaturedImage";
 
 export const metadata = {
   title: "Recruitment Automation — Saksham Chauhan",
-  description: "How a US-based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.",
+  description: "How a US based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.",
 };
 
 export default function RecruitmentAutomation() {
@@ -53,7 +53,7 @@ export default function RecruitmentAutomation() {
                 color: "var(--fg-muted)",
                 maxWidth: "56ch",
               }}>
-                How a US-based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.
+                How a US based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function RecruitmentAutomation() {
               <div style={{ position: "sticky", top: "7rem" }}>
                 <p className="section-label" style={{ marginBottom: "0.75rem" }}>Context</p>
                 <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--fg-muted)" }}>
-                  US-based recruitment agency. High volume operation, experienced team, consistent lead flow — but systemic dysfunction underneath.
+                  US based recruitment agency. High volume operation, experienced team, consistent lead flow — but systemic dysfunction underneath.
                 </p>
               </div>
 
@@ -117,7 +117,7 @@ export default function RecruitmentAutomation() {
                     The agency operated at high volume with consistent leads and an experienced team, yet faced systemic dysfunction. Broad incoming requirements made it impossible to distinguish promising leads from those destined to fail.
                   </p>
                   <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
-                    Senior staff invested substantial time on unqualified opportunities. The candidate pool remained largely inactive, scattered across inboxes and spreadsheets without centralised management. The core issue was systemic, not sourcing-related.
+                    Senior staff invested substantial time on unqualified opportunities. The candidate pool remained largely inactive, scattered across inboxes and spreadsheets without centralised management. The core issue was systemic, not sourcing related.
                   </p>
                 </div>
 
@@ -154,7 +154,7 @@ export default function RecruitmentAutomation() {
                       {
                         layer: "Layer One",
                         title: "Discord Candidate Community",
-                        desc: "Transformed static candidate lists into a structured, organised environment enabling role-based segmentation, consistent engagement, and rapid activation.",
+                        desc: "Transformed static candidate lists into a structured, organised environment enabling role based segmentation, consistent engagement, and rapid activation.",
                       },
                       {
                         layer: "Layer Two",
@@ -194,7 +194,7 @@ export default function RecruitmentAutomation() {
                     The community layer, the qualification layer, and the outreach layer each solved a discrete gap, but together they form a single operating system for the recruitment team. Volume stayed the same. The work the team did to handle that volume changed completely.
                   </p>
                   <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
-                    Pre-qualified requirements replaced open-ended briefs. An organised candidate community replaced scattered inboxes. Triggered outreach sequences replaced manual composition per search. The agency did not shrink the team to make this work. They redirected the team toward the work that actually required human judgment.
+                    Pre-qualified requirements replaced open ended briefs. An organised candidate community replaced scattered inboxes. Triggered outreach sequences replaced manual composition per search. The agency did not shrink the team to make this work. They redirected the team toward the work that actually required human judgment.
                   </p>
                 </div>
 

@@ -116,7 +116,7 @@ export default function AdmissionsAtScale() {
                     {[
                       {
                         n: "Build vs buy",
-                        text: "A generic CRM was evaluated and ruled out — not because it lacked features, but because adopting one would have meant reshaping the admissions workflow to fit the software. Parent conversation holds, multilingual screening, and waitlist logic for social impact admissions are specific enough that forcing them into an off-the-shelf tool would have meant working around it as much as with it.",
+                        text: "A generic CRM was evaluated and ruled out — not because it lacked features, but because adopting one would have meant reshaping the admissions workflow to fit the software. Parent conversation holds, multilingual screening, and waitlist logic for social impact admissions are specific enough that forcing them into an off the shelf tool would have meant working around it as much as with it.",
                       },
                       {
                         n: "What to build first",

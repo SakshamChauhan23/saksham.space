@@ -46,7 +46,7 @@ export default function SocialRipple() {
                 color: "var(--fg-muted)",
                 maxWidth: "56ch",
               }}>
-                SocialRipple — Early-stage employee advocacy platform
+                SocialRipple — Early stage employee advocacy platform
               </p>
             </div>
           </div>
