@@ -120,15 +120,22 @@ applicants rather than administration of their data.
 
 URL: https://saksham.space/work/admissions-at-scale
 
-### SocialRipple (Product Strategy, Design, and Growth)
-A bootstrapped startup where Saksham worked directly with the founder across
-product strategy, design direction, and growth architecture. External
-development support brought the product into early build.
+### SocialRipple (Product Validation, Growth Marketing, Product Management)
+A bootstrapped early stage B2B SaaS employee advocacy platform. Saksham works
+on it as a side project alongside the founder Mayank Tivary — a two-person
+effort at the stage where foundational decisions are still open.
+
+Scope of work: competitor analysis to map positioning gaps, user interviews
+with HR and marketing decision-makers, market study to size the opportunity,
+ICP definition to narrow the first audience, early lead generation and
+campaigns, feature scoping for the first version, and direct collaboration
+with developers to translate validated direction into build.
 
 **Outcome:** Business development outreach is active and the company has
 acquired three working clients. The goal is to reach product market fit by
-the end of 2026. The work now focuses on iteration based on what early clients
-are actually using and where they drop off.
+end of 2026. The work has turned an open opportunity into a tested, defined
+direction: validated demand, a specific first audience, positioning tested
+with real prospects, and a scoped feature set in active development.
 
 URL: https://saksham.space/work/socialripple
 
