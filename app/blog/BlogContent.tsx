@@ -7,6 +7,16 @@ import Section from "@/components/Section";
 // Real Substack posts
 const allPosts = [
     {
+        id: "3",
+        title: "Why Buying a Tool Does Not Change How Your Team Works",
+        excerpt: "Buying software is a transaction. Changing how a team works is not. Why most tools fail to stick, and the order that actually fixes it.",
+        date: "2026-07-27",
+        readTime: "5 min read",
+        tags: ["Product Strategy", "Operations"],
+        substackUrl: "/blog/why-buying-a-tool-does-not-change-how-your-team-works",
+        featured: true,
+    },
+    {
         id: "1",
         title: "Why I stopped treating APIs as just technical details",
         excerpt: "Understanding APIs as products themselves changed how I approach integration and platform strategy.",
@@ -111,8 +121,8 @@ export default function BlogContent() {
                             <motion.a
                                 key={post.id}
                                 href={post.substackUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target={post.substackUrl.startsWith("/") ? "_self" : "_blank"}
+                                rel={post.substackUrl.startsWith("/") ? "" : "noopener noreferrer"}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
@@ -140,7 +150,7 @@ export default function BlogContent() {
                                         {post.readTime}
                                     </span>
                                     <div className="flex items-center gap-1 text-xs font-bold text-foreground group-hover:translate-x-1 transition-transform">
-                                        Read on Substack →
+                                        {post.substackUrl.startsWith("/") ? "Read Article →" : "Read on Substack →"}
                                     </div>
                                 </div>
                             </motion.a>
