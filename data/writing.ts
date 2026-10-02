@@ -25,8 +25,7 @@ export const posts: Post[] = [
     title: "The Real Reason Coca-Cola's AI Works (And a Framework Any Team Can Use)",
     excerpt:
       "AI did not create the consistency. It enforced a consistency already chosen.",
-    date: "2026-10-06",
-    publishAt: "2026-10-06T10:29:00.000Z",
+    date: "2026-10-02",
     tags: ["AI", "Product"],
     href: "https://sakshamspace.substack.com/p/the-real-reason-coca-colas-ai-works",
     source: "substack",
