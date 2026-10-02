@@ -4,21 +4,21 @@ import Footer from "@/components/Footer";
 import BlogContent from "./BlogContent";
 
 export const metadata: Metadata = {
-    title: "Blog - Product Strategy, AI & Building Insights",
+    title: "Writing",
     description:
-        "Deep dives into product strategy, API design, no-code automation, and practical lessons from building and shipping products fast. Read on Substack.",
+        "Every Ground Truth essay. Building with AI, getting products adopted, and the judgment calls in between.",
     alternates: { canonical: "/blog" },
     openGraph: {
-        title: "Blog - Product Strategy, AI & Building Insights",
+        title: "Writing — Ground Truth",
         description:
-            "Deep dives into product strategy, technical execution, and lessons learned from building real products.",
+            "Every essay from the work. Building with AI, getting products adopted, and the judgment calls in between.",
         url: "https://saksham.space/blog",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Blog - Product Strategy, AI & Building Insights",
+        title: "Writing — Ground Truth",
         description:
-            "Deep dives into product strategy, technical execution, and lessons learned from building.",
+            "Every essay from the work. Building with AI, getting products adopted, and the judgment calls in between.",
     },
 };
 
@@ -26,7 +26,7 @@ export default function BlogPage() {
     return (
         <>
             <Header />
-            <main className="pt-20">
+            <main style={{ background: "var(--bg)", paddingTop: "6rem" }}>
                 <BlogContent />
             </main>
             <Footer />

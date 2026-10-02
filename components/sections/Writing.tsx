@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import GroundTruthCta from "@/components/GroundTruthCta";
 
 export default function Writing() {
   const ref = useRef<HTMLElement>(null);
@@ -50,96 +51,31 @@ export default function Writing() {
             </h2>
             <p
               className="body-text"
-              style={{ maxWidth: "38ch", marginBottom: "2.5rem" }}
+              style={{ maxWidth: "38ch" }}
             >
               Notes from the actual work, including the parts I get wrong. Building with AI, getting products adopted, and the judgment calls in between.
             </p>
-            <a
-              href="https://sakshamspace.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline-link"
-              style={{ fontSize: "0.875rem", letterSpacing: "0.02em" }}
-            >
-              Read on Substack →
-            </a>
-
-            {/* Mobile-only subscribe pill */}
-            <a
-              href="https://sakshamspace.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="writing-subscribe-pill"
-              style={{
-                marginTop: "1.5rem",
-                alignItems: "center",
-                gap: "0.5rem",
-                padding: "0.65rem 1.5rem",
-                border: "1px solid #1377ff",
-                borderRadius: "999px",
-                fontSize: "0.8125rem",
-                fontWeight: 500,
-                color: "#1377ff",
-                textDecoration: "none",
-              }}
-            >
-              Subscribe on Substack
-            </a>
           </motion.div>
 
-          {/* Right: circular subscribe button (desktop only) */}
-          <div className="writing-subscribe-circle" style={{ flexShrink: 0 }}>
-            <a
-              href="https://sakshamspace.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                width: "clamp(120px, 13vw, 160px)",
-                height: "clamp(120px, 13vw, 160px)",
-                borderRadius: "50%",
-                border: "1px solid var(--teal)",
-                color: "var(--teal)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textDecoration: "none",
-                fontSize: "0.8125rem",
-                letterSpacing: "0.04em",
-                fontWeight: 500,
-                transition: "background 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.16,1,0.3,1)",
-                flexShrink: 0,
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget;
-                el.style.background = "var(--teal)";
-                el.style.color = "var(--bg)";
-                el.style.transform = "scale(1.08)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget;
-                el.style.background = "transparent";
-                el.style.color = "var(--teal)";
-                el.style.transform = "scale(1)";
-              }}
-              data-cursor-hover
-            >
-              Subscribe
-            </a>
+          <div className="writing-cta">
+            <GroundTruthCta variant="actions" essaysLink />
           </div>
         </div>
       </div>
 
       <style>{`
-        @media (max-width: 640px) {
+        .writing-cta {
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 0.35rem;
+        }
+        @media (max-width: 800px) {
           .writing-grid {
             grid-template-columns: 1fr !important;
-            gap: 1.5rem !important;
+            gap: 1.75rem !important;
           }
-          .writing-subscribe-circle { display: none !important; }
-          .writing-subscribe-pill   { display: inline-flex !important; }
           .writing-section { padding: 3.5rem 0 !important; }
         }
-        .writing-subscribe-pill { display: none; }
       `}</style>
     </section>
   );

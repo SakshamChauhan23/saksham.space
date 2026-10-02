@@ -20,7 +20,7 @@ const projects = [
   {
     index: "02",
     tags: "Systems Design",
-    title: "Four days of manual work, rebuilt to thirty three hours",
+    title: "100 hours of manual work, rebuilt to 24 hours",
     description: "Rebuilt admissions from spreadsheets to a system that tracks every applicant from screening to offer letter in one record.",
     href: "/work/admissions-at-scale",
     image: "/ad-dashboard.png",

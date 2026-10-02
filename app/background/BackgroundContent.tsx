@@ -13,7 +13,7 @@ const experience = [
         description: "Leading product for internal admissions and learning systems.",
         impact: [
             "Owned end-to-end development of internal admissions and learning systems, working hands-on with engineers, ops teams, and data workflows to improve efficiency and user experience.",
-            "Built a custom CRM using Lovable + Cursor + Supabase, translating ambiguous operational needs into structured product logic; reduced processing time by 65% (4 days to 33 hours).",
+            "Built a custom CRM using Lovable + Cursor + Supabase, translating ambiguous operational needs into structured product logic; reduced processing time from 100 hours to 24 hours.",
             "Automated ~60% of manual workflows by designing rule-based and AI-assisted processes, improving turnaround times and reducing operational load by 40+ hours/month.",
             "Led product execution across 15 engineers & 7 ops members, driving planning, sprint alignment, and quality checks; achieved 92% sprint velocity with predictable delivery cycles.",
             "Designed data dashboards for admissions funnels, engagement flows, and SLA performance using analytics tools; enabled faster decision cycles and proactive problem detection.",

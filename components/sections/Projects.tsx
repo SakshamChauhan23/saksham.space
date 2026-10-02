@@ -14,7 +14,7 @@ const projects = [
     {
         title: "Internal CRM System",
         tag: "Operations",
-        description: "Custom CRM built with Lovable + Supabase that reduced operational time by 65% and automated routine data management.",
+        description: "Custom CRM built with Lovable + Supabase that cut application processing from 100 hours to 24 hours.",
         href: "/portfolio/crm",
     },
     {

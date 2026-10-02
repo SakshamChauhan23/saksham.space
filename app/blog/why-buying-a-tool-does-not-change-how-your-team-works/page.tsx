@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GroundTruthCta from "@/components/GroundTruthCta";
 import FaqAccordion from "./FaqAccordion";
 
 const url = "https://saksham.space/blog/why-buying-a-tool-does-not-change-how-your-team-works";
@@ -324,6 +325,12 @@ export default function WhyBuyingToolDoesNotChangeTeamWork() {
               Frequently Asked Questions
             </p>
             <FaqAccordion faqs={faqs} />
+          </div>
+        </section>
+
+        <section style={{ padding: "clamp(2rem, 5vh, 3.5rem) 0 0" }}>
+          <div style={articleWrap}>
+            <GroundTruthCta />
           </div>
         </section>
 

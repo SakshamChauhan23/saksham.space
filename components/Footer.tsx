@@ -26,7 +26,7 @@ export default function Footer() {
         <nav style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
           {[
             { label: "Work", href: "#work" },
-            { label: "Writing", href: "#writing" },
+            { label: "Writing", href: "/blog" },
             { label: "About", href: "/about" },
             { label: "Connect", href: "#connect" },
           ].map((item) => (

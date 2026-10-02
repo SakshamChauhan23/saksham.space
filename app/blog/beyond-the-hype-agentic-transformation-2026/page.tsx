@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GroundTruthCta from "@/components/GroundTruthCta";
 import FaqAccordion from "./FaqAccordion";
 
 const url = "https://saksham.space/blog/beyond-the-hype-agentic-transformation-2026";
@@ -373,6 +374,12 @@ export default function BeyondTheHype() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section style={{ padding: "clamp(2rem, 5vh, 3.5rem) 0 0" }}>
+          <div style={articleWrap}>
+            <GroundTruthCta />
           </div>
         </section>
 

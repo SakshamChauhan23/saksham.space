@@ -112,7 +112,7 @@ Rebuilt a university admissions process from disconnected spreadsheets into a
 unified system tracking every applicant from initial screening through to offer
 letter in a single continuous record.
 
-**Outcome:** End to end admissions cycle reduced from four days to thirty three
+**Outcome:** End to end admissions cycle reduced from 100 hours to 24
 hours. Admissions volume grew without adding headcount. The coordination work
 previously requiring people to manually check records across multiple files is
 now handled by the system. The team redirected time toward conversations with

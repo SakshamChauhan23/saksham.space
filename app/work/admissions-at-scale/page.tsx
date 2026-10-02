@@ -5,7 +5,7 @@ import FeaturedImage from "@/components/FeaturedImage";
 
 export const metadata = {
   title: "Admissions at Scale — Saksham Chauhan",
-  description: "A four day manual process, rebuilt to run in thirty three hours. NavGurukul admissions system.",
+  description: "A 100 hour manual process, rebuilt to run in 24 hours. NavGurukul admissions system.",
 };
 
 export default function AdmissionsAtScale() {
@@ -26,7 +26,7 @@ export default function AdmissionsAtScale() {
                   Work
                 </Link>
                 <span style={{ color: "var(--line)", fontSize: "0.75rem" }}>/</span>
-                <span className="section-label">Systems Design · 2023</span>
+                <span className="section-label">Systems Design · 2025</span>
               </div>
 
               <h1 style={{
@@ -37,7 +37,7 @@ export default function AdmissionsAtScale() {
                 color: "var(--fg)",
                 marginBottom: "clamp(1.25rem, 3vh, 2rem)",
               }}>
-                A four day manual process, rebuilt to run in thirty three hours.
+                100 hours of manual work, rebuilt to run in 24 hours.
               </h1>
 
               <p style={{
@@ -46,7 +46,7 @@ export default function AdmissionsAtScale() {
                 color: "var(--fg-muted)",
                 maxWidth: "56ch",
               }}>
-                NavGurukul, 2023
+                NavGurukul, 2025
               </p>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function AdmissionsAtScale() {
           <div className="site-container">
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "var(--line)" }} className="stats-grid">
               {[
-                { stat: "33h",     label: "Down from 4 days" },
+                { stat: "24 hours", label: "Down from 100 hours" },
                 { stat: "100k+",   label: "Applications managed" },
                 { stat: "0",       label: "Rework rate" },
               ].map(({ stat, label }) => (
@@ -98,7 +98,7 @@ export default function AdmissionsAtScale() {
                 <div>
                   <p className="section-label" style={{ marginBottom: "1.5rem", color: "#1377ff" }}>The problem</p>
                   <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)", marginBottom: "1.5rem" }}>
-                    The process ran on spreadsheets. A single application took four days to move through screening, interview scheduling, and an offer decision, with the steps coordinated manually across multiple people and files.
+                    The process ran on spreadsheets. A single application took 100 hours to move through screening, interview scheduling, and an offer decision, with the steps coordinated manually across multiple people and files.
                   </p>
                   <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)", marginBottom: "1.5rem" }}>
                     Roughly one in seven applications had to be redone because of a manual error — a wrong status, a missed update, a record that fell out of sync with another sheet.
@@ -197,7 +197,7 @@ export default function AdmissionsAtScale() {
                 </blockquote>
 
                 <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
-                  The four days an applicant used to wait on uncertain status is now thirty three hours, and that difference is measured in qualified applicants who stay in the process rather than dropping out of it.
+                  The 100 hours an applicant used to wait on uncertain status is now 24 hours, and that difference is measured in qualified applicants who stay in the process rather than dropping out of it.
                 </p>
                 <p style={{ fontSize: "clamp(1rem, 1.3vw, 1.125rem)", lineHeight: 1.8, color: "var(--fg-muted)" }}>
                   Admissions volume grew without adding headcount. The coordination work that previously required people to manually check records across multiple files is now handled by the system itself. The team redirected that time toward conversations with applicants rather than administration of their data.
