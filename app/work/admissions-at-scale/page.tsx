@@ -1,11 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FeaturedImage from "@/components/FeaturedImage";
+import { SITE_URL, ogImage } from "@/lib/seo";
 
-export const metadata = {
-  title: "Admissions at Scale — Saksham Chauhan",
+export const metadata: Metadata = {
+  title: "Admissions at Scale",
   description: "A 100 hour manual process, rebuilt to run in 24 hours. NavGurukul admissions system.",
+  alternates: { canonical: "/work/admissions-at-scale" },
+  openGraph: {
+    title: "Admissions at Scale — Saksham Chauhan",
+    description: "A 100 hour manual process, rebuilt to run in 24 hours. NavGurukul admissions system.",
+    url: `${SITE_URL}/work/admissions-at-scale`,
+    type: "article",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Admissions at Scale — Saksham Chauhan",
+    description: "A 100 hour manual process, rebuilt to run in 24 hours. NavGurukul admissions system.",
+    images: [ogImage.url],
+  },
 };
 
 export default function AdmissionsAtScale() {
@@ -74,7 +90,7 @@ export default function AdmissionsAtScale() {
 
         {/* Featured image — dashboard */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/ad-dashboard.png" alt="Admissions dashboard" maxWidth="860px" />
+          <FeaturedImage src="/ad-dashboard.webp" alt="Admissions dashboard" maxWidth="860px" />
           <p className="section-label" style={{ padding: "1rem 0", color: "var(--fg-muted)" }}>
             The dashboard — a single view of every applicant's stage, status, and owner
           </p>
@@ -158,7 +174,7 @@ export default function AdmissionsAtScale() {
 
         {/* Image — Interview scheduling */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/ad-interviews.png" alt="Interview scheduling interface" maxWidth="860px" />
+          <FeaturedImage src="/ad-interviews.webp" alt="Interview scheduling interface" maxWidth="860px" />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(3rem, 8vw, 8rem)", padding: "clamp(1.5rem, 3vh, 2.5rem) 0" }} className="case-body-grid">
             <p className="section-label" style={{ color: "var(--fg-muted)" }}>Interview scheduling</p>
             <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "var(--fg-muted)" }}>
@@ -169,7 +185,7 @@ export default function AdmissionsAtScale() {
 
         {/* Image — Offer letter */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/ad-offer-letter.png" alt="Offer letter generation" maxWidth="860px" />
+          <FeaturedImage src="/ad-offer-letter.webp" alt="Offer letter generation" maxWidth="860px" />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "clamp(3rem, 8vw, 8rem)", padding: "clamp(1.5rem, 3vh, 2.5rem) 0" }} className="case-body-grid">
             <p className="section-label" style={{ color: "var(--fg-muted)" }}>Offer letter</p>
             <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "var(--fg-muted)" }}>

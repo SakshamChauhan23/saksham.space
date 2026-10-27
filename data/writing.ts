@@ -17,9 +17,23 @@ export type Post = {
   source: WritingSource;
   /** ISO timestamp. The essay stays off the archive until this time. */
   publishAt?: string;
+  /** Path under /public. Shown on the homepage's recent-essay cards. */
+  cover?: string;
 };
 
 export const posts: Post[] = [
+  {
+    id: "measure-the-lift",
+    title: "Measure the Lift Before You Sell the Television",
+    excerpt:
+      "A supermarket that measured lifts and an airline that handed out umbrellas both beat better-equipped rivals. The advantage was never the tool. It was the system.",
+    date: "2026-10-27",
+    readTime: "6 min",
+    tags: ["AI", "Operations"],
+    href: "/blog/measure-the-lift-before-you-sell-the-television",
+    source: "site",
+    cover: "/blog/measure-the-lift/cover.webp",
+  },
   {
     id: "coca-cola-ai",
     title: "The Real Reason Coca-Cola's AI Works (And a Framework Any Team Can Use)",
@@ -29,6 +43,7 @@ export const posts: Post[] = [
     tags: ["AI", "Product"],
     href: "https://sakshamspace.substack.com/p/the-real-reason-coca-colas-ai-works",
     source: "substack",
+    cover: "/blog/covers/coca-cola-ai.webp",
   },
   {
     id: "build-the-shortcut",
@@ -39,6 +54,7 @@ export const posts: Post[] = [
     tags: ["Product", "GTM"],
     href: "https://sakshamspace.substack.com/p/build-the-shortcut-just-do-not-sell",
     source: "substack",
+    cover: "/blog/covers/build-the-shortcut.webp",
   },
   {
     id: "buying-a-tool",
@@ -50,6 +66,7 @@ export const posts: Post[] = [
     tags: ["Product", "Operations"],
     href: "/blog/why-buying-a-tool-does-not-change-how-your-team-works",
     source: "site",
+    cover: "/blog/covers/buying-a-tool.webp",
   },
   {
     id: "beyond-the-hype",

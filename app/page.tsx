@@ -8,6 +8,10 @@ import Writing from "@/components/sections/Writing";
 import Connect from "@/components/sections/Connect";
 import { ThreeSceneClient as ThreeScene } from "@/components/ClientOnly";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function Home() {
   return (
     <>

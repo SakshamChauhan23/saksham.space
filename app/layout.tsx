@@ -29,6 +29,7 @@ const jsonLd = {
         "https://www.linkedin.com/in/sakshamchauhan/",
         "https://x.com/SakshamCh2302",
         "https://substack.com/@sakshamchauhan",
+        "https://sakshamspace.substack.com",
       ],
     },
   ],
@@ -71,13 +72,10 @@ export const metadata: Metadata = {
   creator: "Saksham Chauhan",
   publisher: "Saksham Chauhan",
   metadataBase: new URL("https://saksham.space"),
-  alternates: { canonical: "/" },
+  manifest: "/site.webmanifest",
   icons: {
-    icon: [
-      { url: "/saksham.png", type: "image/png" },
-    ],
-    apple: "/saksham.png",
-    shortcut: "/saksham.png",
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "96x96" }],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Saksham Chauhan — AI Product Manager & Builder",
@@ -125,10 +123,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <Script
-          id="json-ld"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         

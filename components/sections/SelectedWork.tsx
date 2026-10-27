@@ -13,8 +13,8 @@ const projects = [
     title: "Adaptive difficulty, built for each learner",
     description: "An evaluation system powered by AI that adjusts question difficulty in real time, built for learners on 2G networks and entry level devices.",
     href: "/work/adaptive-assessment",
-    image: "/zuvy-eval.png",
-    image2: "/zuvy-eval2.png",
+    image: "/zuvy-eval.webp",
+    image2: "/zuvy-eval2.webp",
     bg: "linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%)",
   },
   {
@@ -23,8 +23,8 @@ const projects = [
     title: "100 hours of manual work, rebuilt to 24 hours",
     description: "Rebuilt admissions from spreadsheets to a system that tracks every applicant from screening to offer letter in one record.",
     href: "/work/admissions-at-scale",
-    image: "/ad-dashboard.png",
-    image2: "/ad-interviews.png",
+    image: "/ad-dashboard.webp",
+    image2: "/ad-interviews.webp",
     bg: "linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%)",
   },
   {
@@ -33,8 +33,8 @@ const projects = [
     title: "Design, product, and growth. A side project.",
     description: "Working directly with the founder to define audience, shape the product's first version, and build growth in from the start.",
     href: "/work/socialripple",
-    image: "/sr-dashboard.png",
-    image2: "/sr-timeline.png",
+    image: "/sr-dashboard.webp",
+    image2: "/sr-timeline.webp",
     bg: "linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%)",
   },
   {
@@ -43,8 +43,8 @@ const projects = [
     title: "Too many candidates, too little signal.",
     description: "Three automation layers that turned a manual reactive recruitment pipeline into a system that qualifies, activates, and reaches out on its own.",
     href: "/work/recruitment-automation",
-    image: "/recruitment-dashboard.png",
-    image2: "/recruitment-dashboard2.png",
+    image: "/recruitment-dashboard.webp",
+    image2: "/recruitment-dashboard2.webp",
     bg: "linear-gradient(135deg, #fde8d0 0%, #fff5ee 100%)",
   },
 ];

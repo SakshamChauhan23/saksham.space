@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { posts, publishedPosts } from "@/data/writing";
 
 const BASE = "https://saksham.space";
-const NOW  = new Date("2026-06-21");
+const NOW  = new Date("2026-10-27");
 
 export const dynamic = "force-static";
 
@@ -21,10 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE}/resume`,
+      url: `${BASE}/background`,
       lastModified: NOW,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${BASE}/services`,
+      lastModified: NOW,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${BASE}/work/adaptive-assessment`,
@@ -63,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(post.date),
         changeFrequency: "monthly" as const,
         priority: 0.75,
+        ...(post.cover && { images: [`${BASE}${post.cover}`] }),
       })),
   ];
 }

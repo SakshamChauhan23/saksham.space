@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GroundTruthCta from "@/components/GroundTruthCta";
 import FaqAccordion from "./FaqAccordion";
+import { articleGraph } from "@/lib/seo";
 
 const url = "https://saksham.space/blog/beyond-the-hype-agentic-transformation-2026";
 const title = "What Separates AI Winners From Everyone Else in 2026";
@@ -30,14 +31,13 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
+    ...articleGraph({
+      path: "/blog/beyond-the-hype-agentic-transformation-2026",
       headline: "Beyond the Hype: What Actually Separates AI Winners From Everyone Else in 2026",
-      author: { "@type": "Person", name: "Saksham" },
+      description,
       datePublished: "2026-07-12",
-      dateModified: "2026-07-12",
-      mainEntityOfPage: url,
-    },
+      image: "/blog/beyond-the-hype-agentic-transformation-2026/opengraph-image",
+    }),
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -109,13 +109,13 @@ function A({ href, children }: { href: string; children: React.ReactNode }) {
 }
 
 const pStyle: React.CSSProperties = {
-  fontSize: "clamp(1rem, 1.3vw, 1.125rem)",
+  fontSize: "clamp(1rem, 1.35vw, 1.25rem)",
   lineHeight: 1.8,
   color: "rgba(0, 0, 0, 0.72)",
 };
 
 const h2Style: React.CSSProperties = {
-  fontSize: "clamp(1.5rem, 2.6vw, 2.125rem)",
+  fontSize: "clamp(1.5rem, 2.8vw, 2.5rem)",
   fontWeight: 400,
   letterSpacing: "-0.01em",
   lineHeight: 1.2,
@@ -123,7 +123,7 @@ const h2Style: React.CSSProperties = {
 };
 
 const articleWrap: React.CSSProperties = {
-  maxWidth: "700px",
+  maxWidth: "1000px",
   margin: "0 auto",
   padding: "0 clamp(1.5rem, 6vw, 3rem)",
 };
@@ -211,7 +211,7 @@ export default function BeyondTheHype() {
             </div>
 
             <h1 style={{
-              fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)",
+              fontSize: "clamp(2.25rem, 5vw, 4.25rem)",
               fontWeight: 400,
               letterSpacing: "-0.03em",
               lineHeight: 1.1,
@@ -331,7 +331,7 @@ export default function BeyondTheHype() {
 
           <blockquote style={{ borderLeft: "2px solid #1377ff", paddingLeft: "1.5rem", margin: "0.5rem 0" }}>
             <p style={{
-              fontSize: "clamp(1.125rem, 1.8vw, 1.5rem)",
+              fontSize: "clamp(1.25rem, 2vw, 1.75rem)",
               fontWeight: 400,
               letterSpacing: "-0.02em",
               lineHeight: 1.5,

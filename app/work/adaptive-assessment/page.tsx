@@ -1,11 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FeaturedImage from "@/components/FeaturedImage";
+import { SITE_URL, ogImage } from "@/lib/seo";
 
-export const metadata = {
-  title: "Adaptive Assessment System — Saksham Chauhan",
+export const metadata: Metadata = {
+  title: "Adaptive Assessment System",
   description: "Real time difficulty that adapts to each learner. Built for NavGurukul, reaching 3,000+ learners with 85% adoption.",
+  alternates: { canonical: "/work/adaptive-assessment" },
+  openGraph: {
+    title: "Adaptive Assessment System — Saksham Chauhan",
+    description: "Real time difficulty that adapts to each learner. Built for NavGurukul, reaching 3,000+ learners with 85% adoption.",
+    url: `${SITE_URL}/work/adaptive-assessment`,
+    type: "article",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adaptive Assessment System — Saksham Chauhan",
+    description: "Real time difficulty that adapts to each learner. Built for NavGurukul, reaching 3,000+ learners with 85% adoption.",
+    images: [ogImage.url],
+  },
 };
 
 export default function AdaptiveAssessment() {
@@ -75,7 +91,7 @@ export default function AdaptiveAssessment() {
 
         {/* Featured image 1 */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/zuvy-eval.png" alt="Zuvy adaptive evaluation interface" />
+          <FeaturedImage src="/zuvy-eval.webp" alt="Zuvy adaptive evaluation interface" />
         </section>
 
         {/* Body */}
@@ -145,7 +161,7 @@ export default function AdaptiveAssessment() {
 
         {/* Featured image 2 */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/zuvy-eval2.png" alt="Zuvy evaluation detail view" />
+          <FeaturedImage src="/zuvy-eval2.webp" alt="Zuvy evaluation detail view" />
         </section>
 
         {/* Build and proof + outcome */}

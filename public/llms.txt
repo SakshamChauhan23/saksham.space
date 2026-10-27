@@ -166,6 +166,20 @@ getting products adopted, and the judgment calls that sit between strategy and
 execution. Notes from actual work, including the parts that do not go as planned.
 
 Read at: https://sakshamspace.substack.com
+Full archive: https://saksham.space/blog
+
+### Essays on saksham.space
+
+- [Measure the Lift Before You Sell the Television](https://saksham.space/blog/measure-the-lift-before-you-sell-the-television) (October 2026):
+  A supermarket that measured lifts and an airline that handed out umbrellas
+  both beat better-equipped rivals. The advantage was never the tool. It was
+  the system, and AI amplifies whichever system it is given.
+- [Why Buying a Tool Does Not Change How Your Team Works](https://saksham.space/blog/why-buying-a-tool-does-not-change-how-your-team-works) (July 2026):
+  Buying software is a transaction. Changing how a team works is not. People
+  first, then process, then technology.
+- [Beyond the Hype: What Actually Separates AI Winners From Everyone Else in 2026](https://saksham.space/blog/beyond-the-hype-agentic-transformation-2026) (July 2026):
+  Most companies use AI; few profit from it. The gap is strategy and workflow
+  design, not the model.
 
 ---
 
@@ -182,4 +196,4 @@ Read at: https://sakshamspace.substack.com
 - X: https://x.com/SakshamCh2302
 - Substack: https://sakshamspace.substack.com
 
-*Last updated: June 2026*
+*Last updated: October 2026*

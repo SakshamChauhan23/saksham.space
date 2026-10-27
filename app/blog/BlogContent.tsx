@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
-import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 import {
   filterPosts,
   posts,
@@ -12,6 +11,7 @@ import {
   type TopicFilter,
 } from "@/data/writing";
 import GroundTruthCta from "@/components/GroundTruthCta";
+import PostLink from "@/components/PostLink";
 
 const SOURCES: { id: SourceFilter; label: string }[] = [
   { id: "all", label: "All" },
@@ -29,29 +29,6 @@ function formatDate(iso: string) {
 function readLabel(post: Post) {
   if (post.source === "site") return post.readTime ? `Read essay · ${post.readTime}` : "Read essay";
   return "Read on Substack";
-}
-
-function PostLink({
-  post,
-  className,
-  children,
-}: {
-  post: Post;
-  className: string;
-  children: ReactNode;
-}) {
-  if (post.source === "substack") {
-    return (
-      <a href={post.href} className={className} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    );
-  }
-  return (
-    <Link href={post.href} className={className}>
-      {children}
-    </Link>
-  );
 }
 
 export default function BlogContent() {

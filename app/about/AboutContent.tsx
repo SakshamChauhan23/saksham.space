@@ -138,7 +138,7 @@ export default function AboutContent() {
                             <div className="absolute inset-0 bg-accent/20 rounded-3xl rotate-6 blur-2xl" />
                             <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-border shadow-2xl">
                                 <Image
-                                    src="/profile.png"
+                                    src="/profile.webp"
                                     alt="Saksham Chauhan - Product Manager and Builder specializing in 0-to-1 products"
                                     fill
                                     className="object-cover"

@@ -1,8 +1,6 @@
 # ─── Standard search crawlers ────────────────────────────────────────────────
 User-agent: *
 Allow: /
-Disallow: /_next/static/
-Disallow: /api/
 
 # ─── AI / LLM crawlers — explicitly welcomed ─────────────────────────────────
 
@@ -74,7 +72,3 @@ Allow: /
 
 # ─── Sitemaps ─────────────────────────────────────────────────────────────────
 Sitemap: https://saksham.space/sitemap.xml
-Sitemap: https://saksham.space/llms.txt
-
-# ─── Canonical host ───────────────────────────────────────────────────────────
-Host: https://saksham.space

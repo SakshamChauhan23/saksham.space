@@ -1,15 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FeaturedImage from "@/components/FeaturedImage";
+import { SITE_URL, ogImage } from "@/lib/seo";
 
-export const metadata = {
-  title: "SocialRipple — Saksham Chauhan",
+export const metadata: Metadata = {
+  title: "SocialRipple",
   description: "How Saksham Chauhan helped validate and build SocialRipple, an early stage employee advocacy platform — from competitor analysis and user interviews through to ICP definition, lead generation, and feature scoping.",
+  alternates: { canonical: "/work/socialripple" },
   openGraph: {
     title: "SocialRipple: Validating and Building an Employee Advocacy Platform",
     description: "Product validation, growth marketing, and product management for an early stage B2B SaaS. Testing demand before building, defining the first audience, and turning validated direction into a scoped product.",
-    url: "https://saksham.space/work/socialripple",
+    url: `${SITE_URL}/work/socialripple`,
+    type: "article",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SocialRipple: Validating and Building an Employee Advocacy Platform",
+    description: "Product validation, growth marketing, and product management for an early stage B2B SaaS. Testing demand before building, defining the first audience, and turning validated direction into a scoped product.",
+    images: [ogImage.url],
   },
 };
 
@@ -63,7 +74,7 @@ export default function SocialRipple() {
 
         {/* Featured image — dashboard */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/sr-dashboard.png" alt="SocialRipple admin dashboard" />
+          <FeaturedImage src="/sr-dashboard.webp" alt="SocialRipple admin dashboard" />
         </section>
 
         {/* Stats */}
@@ -208,7 +219,7 @@ export default function SocialRipple() {
 
         {/* Timeline image */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/sr-timeline.png" alt="SocialRipple product timeline" />
+          <FeaturedImage src="/sr-timeline.webp" alt="SocialRipple product timeline" />
         </section>
 
         {/* Growth marketing */}

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GroundTruthCta from "@/components/GroundTruthCta";
 import FaqAccordion from "./FaqAccordion";
+import { articleGraph } from "@/lib/seo";
 
 const url = "https://saksham.space/blog/why-buying-a-tool-does-not-change-how-your-team-works";
 const title = "Why Buying a Tool Does Not Change How Your Team Works";
@@ -30,14 +31,13 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Article",
+    ...articleGraph({
+      path: "/blog/why-buying-a-tool-does-not-change-how-your-team-works",
       headline: title,
-      author: { "@type": "Person", name: "Saksham" },
+      description,
       datePublished: "2026-07-27",
-      dateModified: "2026-07-27",
-      mainEntityOfPage: url,
-    },
+      image: "/blog/why-buying-a-tool-does-not-change-how-your-team-works/opengraph-image",
+    }),
     {
       "@type": "FAQPage",
       mainEntity: [
@@ -101,13 +101,13 @@ function A({ href, children }: { href: string; children: React.ReactNode }) {
 }
 
 const pStyle: React.CSSProperties = {
-  fontSize: "clamp(1rem, 1.3vw, 1.125rem)",
+  fontSize: "clamp(1rem, 1.35vw, 1.25rem)",
   lineHeight: 1.8,
   color: "rgba(0, 0, 0, 0.72)",
 };
 
 const h2Style: React.CSSProperties = {
-  fontSize: "clamp(1.5rem, 2.6vw, 2.125rem)",
+  fontSize: "clamp(1.5rem, 2.8vw, 2.5rem)",
   fontWeight: 400,
   letterSpacing: "-0.01em",
   lineHeight: 1.2,
@@ -115,7 +115,7 @@ const h2Style: React.CSSProperties = {
 };
 
 const articleWrap: React.CSSProperties = {
-  maxWidth: "700px",
+  maxWidth: "1000px",
   margin: "0 auto",
   padding: "0 clamp(1.5rem, 6vw, 3rem)",
 };
@@ -187,7 +187,7 @@ export default function WhyBuyingToolDoesNotChangeTeamWork() {
             </div>
 
             <h1 style={{
-              fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)",
+              fontSize: "clamp(2.25rem, 5vw, 4.25rem)",
               fontWeight: 400,
               letterSpacing: "-0.03em",
               lineHeight: 1.1,

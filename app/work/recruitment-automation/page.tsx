@@ -1,11 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FeaturedImage from "@/components/FeaturedImage";
+import { SITE_URL, ogImage } from "@/lib/seo";
 
-export const metadata = {
-  title: "Recruitment Automation — Saksham Chauhan",
+export const metadata: Metadata = {
+  title: "Recruitment Automation",
   description: "How a US based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.",
+  alternates: { canonical: "/work/recruitment-automation" },
+  openGraph: {
+    title: "Recruitment Automation — Saksham Chauhan",
+    description: "How a US based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.",
+    url: `${SITE_URL}/work/recruitment-automation`,
+    type: "article",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Recruitment Automation — Saksham Chauhan",
+    description: "How a US based recruitment agency turned an overwhelmed pipeline into a system that runs on logic, not individual effort and memory.",
+    images: [ogImage.url],
+  },
 };
 
 export default function RecruitmentAutomation() {
@@ -61,7 +77,7 @@ export default function RecruitmentAutomation() {
 
         {/* Featured image */}
         <section style={{ padding: "0 clamp(1.5rem, 5vw, 5rem)" }}>
-          <FeaturedImage src="/recruitment-dashboard.png" alt="Recruitment automation dashboard" />
+          <FeaturedImage src="/recruitment-dashboard.webp" alt="Recruitment automation dashboard" />
         </section>
 
         {/* Stats bar */}
@@ -179,8 +195,8 @@ export default function RecruitmentAutomation() {
                 </div>
 
                 {/* Additional screenshots */}
-                <FeaturedImage src="/recruitment-dashboard2.png" alt="Recruitment automation — pipeline view" maxWidth="100%" />
-                <FeaturedImage src="/recruitment-dashboard3.png" alt="Recruitment automation — outreach sequences" maxWidth="100%" />
+                <FeaturedImage src="/recruitment-dashboard2.webp" alt="Recruitment automation — pipeline view" maxWidth="100%" />
+                <FeaturedImage src="/recruitment-dashboard3.webp" alt="Recruitment automation — outreach sequences" maxWidth="100%" />
 
                 {/* Outcome */}
                 <div>
